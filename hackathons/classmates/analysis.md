@@ -8,7 +8,10 @@ more challenges analyses.
 ## How many students like sushi as their favorite food?
 
 {% lodash %}
-return "[answer]"
+return  _.size(_.filter(_.pluck(data.comments, 'body'), function(n){
+
+return _.last(n.toLowerCase().split(" ")) == 'sushi'}
+	))
 {% endlodash %}
 
 The answer is {{result}}.
@@ -16,7 +19,9 @@ The answer is {{result}}.
 ## Who are the students liking Python the most?
 
 {% lodash %}
-return "[answer]"
+return _.size(_.filter(_.pluck(data.comments, 'body'), function(n){
+return (n.toLowerCase().match(/.*python.*/))}))
+	
 {% endlodash %}
 
 Their names are {{result}}.
