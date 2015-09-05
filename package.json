@@ -6,6 +6,7 @@
   "dependencies": {
     "gitbook-plugin-bigdata": "bigdatahci2015/gitbook-plugin-bigdata",
     "gitbook-plugin-toggle-chapters": "^0.0.3",
+    "highlight": "^0.2.3",
     "lodash": "^3.10.1"
   },
   "devDependencies": {},

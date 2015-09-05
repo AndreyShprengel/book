@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="../../gitbook/style.css">
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/highlight.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -29,7 +37,7 @@
         
     
     
-    <link rel="next" href="../../hackathons/index.html" />
+    <link rel="next" href="../../learning/week2/index.html" />
     
     
     <link rel="prev" href="../../learning/week1/svg-template.html" />
@@ -40,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Sun Aug 30 2015 10:43:12 GMT-0600 (MDT)">
+    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Sat Sep 05 2015 10:02:42 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -203,6 +211,57 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3" data-path="learning/week2/index.html">
+            
+                
+                    <a href="../../learning/week2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Week 2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="learning/week2/report.html">
+            
+                
+                    <a href="../../learning/week2/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="learning/week2/viz.html">
+            
+                
+                    <a href="../../learning/week2/viz.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Tableau Viz
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -263,6 +322,87 @@
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.2.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="hackathons/classmates/index.html">
+            
+                
+                    <a href="../../hackathons/classmates/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Classmates
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="hackathons/classmates/data.html">
+            
+                
+                    <a href="../../hackathons/classmates/data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
+            
+                
+                    <a href="../../hackathons/classmates/warmup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        Warmup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+            
+                
+                    <a href="../../hackathons/classmates/analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="hackathons/classmates/report.html">
+            
+                
+                    <a href="../../hackathons/classmates/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
                         
                         Report
                     </a>
@@ -395,12 +535,12 @@ was it downloaded just last week alone?</p>
 <p>Let&apos;s create a data array withthe contents: 1,2,3,4,5. This array has 5 items.</p>
 <p>To get the first item, we can use lodash&apos;s <a href="https://lodash.com/docs#first" target="_blank">_.first</a>.</p>
 <p><pre>
-return _.first(data)
+<span class="keyword">return</span> _.first(data)
 </pre></p>
 <p>The result is 1.</p>
 <p>To get the first 3 elements, we can use lodash&apos;s <a href="https://lodash.com/docs#take" target="_blank">_.take</a></p>
 <p><pre>
-return _.take(data, 3)
+<span class="keyword">return</span> _.take(data, <span class="number">3</span>)
 </pre></p>
 <p>The result is 1,2,3.</p>
 <h3 id="array-of-objects">Array of objects</h3>
@@ -410,7 +550,7 @@ return _.take(data, 3)
 <p>To retrieve the name field from each object in this array, lodash&apos;s
 <a href="https://lodash.com/docs#pluck" target="_blank">_.pluck</a> is very handy.</p>
 <p><pre>
-return _.pluck(data, &apos;name&apos;)
+<span class="keyword">return</span> _.pluck(data, <span class="string">&apos;name&apos;</span>)
 </pre></p>
 <p>The result is John,Mary,Peter.</p>
 <p>We can even display the result nicely as a bullet list</p>
@@ -433,7 +573,7 @@ return _.pluck(data, &apos;name&apos;)
 <p>Using <a href="https://lodash.com/docs#find" target="_blank">_.find</a>, we can look up an object by its field.</p>
 <p>Let&apos;s try to find out how old Mary is.</p>
 <p><pre>
-return _.find(data, {name: &apos;Mary&apos;})
+<span class="keyword">return</span> _.find(data, {name: <span class="string">&apos;Mary&apos;</span>})
 </pre></p>
 <p>Mary is 32 years-old.</p>
 <h2 id="challenges">Challenges</h2>
@@ -443,32 +583,32 @@ return _.find(data, {name: &apos;Mary&apos;})
 <p>[{&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:45},{&quot;name&quot;:&quot;Mary&quot;,&quot;age&quot;:32},{&quot;name&quot;:&quot;Peter&quot;,&quot;age&quot;:54},{&quot;name&quot;:&quot;Jane&quot;,&quot;age&quot;:12}]</p>
 <h3 id="q-what-are-the-ages-of-these-people">Q: What are the ages of these people?</h3>
 <p><pre>
-// replace this code with your solution that uses lodash
-return _.pluck(data, &apos;age&apos;)
+<span class="comment">// replace this code with your solution that uses lodash</span>
+<span class="keyword">return</span> _.pluck(data, <span class="string">&apos;age&apos;</span>)
 </pre></p>
 <p>The names are 45,32,54,12</p>
 <h3 id="q-what-is-the-youngest-age">Q. What is the youngest age?</h3>
 <p><pre>
-// replace this code with your solution that uses lodash
-// hint: use _.pluck and _.min
-ages = _.pluck(data, &apos;age&apos;)
-return _.min(ages)
+<span class="comment">// replace this code with your solution that uses lodash</span>
+<span class="comment">// hint: use _.pluck and _.min</span>
+ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">return</span> _.min(ages)
 </pre></p>
 <p>The youngest age is 12.</p>
 <h3 id="q-what-is-the-oldest-age">Q. What is the oldest age?</h3>
 <p><pre>
-// replace this code with your solution that uses lodash
-ages = _.pluck(data, &apos;age&apos;)
-return _.max(ages)
+<span class="comment">// replace this code with your solution that uses lodash</span>
+ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
+<span class="keyword">return</span> _.max(ages)
 </pre></p>
 <p>The oldest age is 54.</p>
 <h3 id="q-who-is-the-youngest-person">Q. Who is the youngest person?</h3>
 <p><pre>
-// replace this code with your solution that uses lodash
-// hint: use your previous solution with _.find
-ages = _.pluck(data, &apos;age&apos;)
+<span class="comment">// replace this code with your solution that uses lodash</span>
+<span class="comment">// hint: use your previous solution with _.find</span>
+ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
 youngest_age = _.min(ages)
-return _.find(data,  {age: youngest_age})
+<span class="keyword">return</span> _.find(data,  {age: youngest_age})
 </pre></p>
 <p>The youngest person is Jane.</p>
 
@@ -484,7 +624,7 @@ return _.find(data,  {age: youngest_age})
         <a href="../../learning/week1/svg-template.html" class="navigation navigation-prev " aria-label="Previous page: Template Engine"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/index.html" class="navigation navigation-next " aria-label="Next page: Hackathons"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week2/index.html" class="navigation navigation-next " aria-label="Next page: Week 2"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
@@ -494,6 +634,10 @@ return _.find(data,  {age: youngest_age})
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
