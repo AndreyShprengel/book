@@ -9,6 +9,8 @@
         * [Template Engine](learning/week1/svg-template.md)
         * [Lodash](learning/week1/lodash.md)
     * [Week 2](learning/week2/index.md)
+        * [Report](learning/week2/report.md)
+        * [Tableau Viz](learning/week2/viz.md)
 * [Hackathons](hackathons/index.md)
     * [Tinker](hackathons/tinker/index.md)
         * [Method](hackathons/tinker/method.md)

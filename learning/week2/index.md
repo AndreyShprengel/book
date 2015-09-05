@@ -2,13 +2,13 @@
 
 This week's learning challenge has two components.
 
-## Coding - More Lodash and SVG Template (TEAM)
+## Team - Create a Report for the Classmate Hackathon
 
-* use [_.groupBy](https://lodash.com/docs#groupBy) to compute distributions (Team)
-* generate tables based on actual data from the "Classmates Hackathon" (Team)
-* generate bar charts based on actual data from the "Classmates Hackathon" (Individual)
+* choose your own questions and answer them using Javscirpt and Lodash.
+* report your findings in sentences with real data embedded in them
+* visualization is not necessary
 
-## GUI
+## Individual - Create Visualization using a GUI-based Tool
 
-* learn the basics of [Tableau public](https://public.tableau.com/s/) (Individual)
-* get the same data into Tableau and create similar bar charts (Individual)
+* learn and use [Tableau public](https://public.tableau.com/s/) to create visualizations
+(barchar, linechart, table ...etc) to answer the same questions in your team's report.
