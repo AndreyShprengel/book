@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Template Engine | book</title>
+        <title>Warmup | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../learning/week1/lodash.html" />
+    <link rel="next" href="../../hackathons/classmates/analysis.html" />
     
     
-    <link rel="prev" href="../../learning/week1/index.html" />
+    <link rel="prev" href="../../hackathons/classmates/data.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2.1" data-basepath="../.." data-revision="Sun Sep 06 2015 22:26:31 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.2" data-basepath="../.." data-revision="Sun Sep 06 2015 22:26:31 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -176,7 +176,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="learning/week1/svg-template.html">
+        <li class="chapter " data-level="1.2.1" data-path="learning/week1/svg-template.html">
             
                 
                     <a href="../../learning/week1/svg-template.html">
@@ -365,7 +365,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
+        <li class="chapter active" data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
             
                 
                     <a href="../../hackathons/classmates/warmup.html">
@@ -525,224 +525,69 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="template-engine">Template Engine</h1>
-<p>In the intro class, you made bar charts by writing plain <code>&lt;svg&gt;</code> tags. Imagine
-having to do that for lots and lots of data points! No way.</p>
-<p>This week, your learning task is to learn how to utilize a template engine to
-automate the creation of svg-based data visualization. Fortunately, gitbook has
-a template engine built-in already, which is
-<a href="https://mozilla.github.io/nunjucks/" target="_blank">nunjuncks</a>. Below are working examples how
-to utilize the <a href="https://mozilla.github.io/nunjucks/templating.html#for" target="_blank">for</a> tag
-to render a whole bunch of elements.</p>
-<h2 id="a-list-of-numbers">A list of numbers</h2>
-<li>1</li>
-
-<li>2</li>
-
-<li>3</li>
-
-<li>4</li>
-
-<li>5</li>
-
-<li>6</li>
-
-<li>7</li>
-
-
-<h2 id="an-array-of-rectangles">An array of rectangles</h2>
-<p>The rectangles below are also generated using the tag.</p>
-<svg width="500" height="200">
-
-    <rect x="20" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="40" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="60" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="80" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="100" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="120" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="140" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-</svg>
-
-<h1 id="challenges">Challenges</h1>
-<p>Now it&apos;s your team&apos;s turn to work together to complete the challenges below.</p>
-<h2 id="1d-data">1D Data</h2>
-<h3 id="a-list-of-numbers">A list of numbers</h3>
-<p>Draw negative numbers in red and positive numbers in green.</p>
-<li><font color="green">43</font></li>
-
-
-
-<li><font color="green">21</font></li>
-
-
-
-<li><font color="red">-13</font></li>
-
-
-
-<li><font color="green">32</font></li>
-
-
-
-<li><font color="green">20</font></li>
-
-
-
-<li><font color="green">5</font></li>
-
-
-
-<li><font color="red">-8</font></li>
-
-
-
-<li><font color="green">29</font></li>
-
-
-
-<li><font color="green">9</font></li>
-
-
-
-<p>(Hint: use the <a href="https://mozilla.github.io/nunjucks/templating.html#if" target="_blank">if tag</a>)</p>
-<h3 id="bar-chart">Bar Chart</h3>
-<ul>
-<li>Below should be a bar chart to display the data: 43,21,32,20,5,29,9</li>
-<li>There should be some gaps between the bars.</li>
-</ul>
-<svg width="500" height="200">
-
-    <rect x="30 " width="20" height="43" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="60 " width="20" height="21" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="90 " width="20" height="32" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="120 " width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="150 " width="20" height="5" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="180 " width="20" height="29" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect x="210 " width="20" height="9" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-</svg>
-
-<h3 id="bar-chart-horizontal">Bar Chart (Horizontal)</h3>
-<ul>
-<li>Same as the previous, but bars are horizontal.</li>
-</ul>
-<svg width="500" height="200">
-
-    <rect y="30" width="43" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="60" width="21" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="90" width="32" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="120" width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="150" width="5" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="180" width="29" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-    <rect y="210" width="9" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
-
-</svg>
-
-<h2 id="2d-data">2D Data</h2>
-<h3 id="table">Table</h3>
-<ul>
-<li>Draw a table to display the data, using <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code></li>
-<li>You will need to create a nested for loop.</li>
-</ul>
-<table>
-
-        <tr>
-
-             <td>10</td>
-
-             <td>15</td>
-
-        </tr>
-
-        <tr>
-
-             <td>20</td>
-
-             <td>12</td>
-
-        </tr>
-
-        <tr>
-
-             <td>31</td>
-
-             <td>42</td>
-
-        </tr>
-
-        <tr>
-
-             <td>12</td>
-
-             <td>52</td>
-
-        </tr>
-
-        <tr>
-
-             <td>33</td>
-
-             <td>24</td>
-
-        </tr>
-
-</table>
-
-
-<h3 id="x-y-plot">X-Y Plot</h3>
-<ul>
-<li>Plot the data using <code>&lt;circle&gt;</code> to represent each data point.</li>
-<li>Scale the data to nicely occupy the display area</li>
-</ul>
-<svg width="500" height="200" style="border:1px solid grey">
-
-    <circle cx="140" cy="45" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="280" cy="36" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="434" cy="126" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="168" cy="156" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="462" cy="72" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-</svg>
-
-<h3 id="x-y-plot-colored">X-Y Plot (Colored)</h3>
-<p>Now each data point has three values. Extend the previous solution. Use <em>size</em>
-of the circle to represent the third value.</p>
-<svg width="500" height="200" style="border:1px solid grey">
-
-    <circle cx="140" cy="45" r="4" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="280" cy="36" r="2" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="434" cy="126" r="6" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="168" cy="156" r="1" stroke="black" stroke-width="3" fill="red"/>
-
-    <circle cx="462" cy="72" r="6" stroke="black" stroke-width="3" fill="red"/>
-
-</svg>
+                        <h1 id="warmup">Warmup</h1>
+<p>As warmup, let&apos;s being with some simple questions.</p>
+<p>The comments data is imported as <code>data.comments</code>.</p>
+<h2 id="how-many-people-have-submitted-comments">How many people have submitted comments?</h2>
+<p><pre>
+
+<span class="keyword">return</span> _.size(data.comments)
+</pre></p>
+<p>There are 26 submissions.</p>
+<h2 id="who-is-the-first-person-submitting-a-comment">Who is the first person submitting a comment?</h2>
+<p>We can get the data of the first comment by</p>
+<p><pre>
+<span class="comment">// TODO: use lodash&apos;s method instead of direct array access via [0]</span>
+<span class="keyword">return</span> _.first(data.comments)
+</pre></p>
+<p>The result is</p>
+<pre>{
+ &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/comments/133203904&quot;,
+ &quot;html_url&quot;: &quot;https://github.com/bigdatahci2015/forum/issues/1#issuecomment-133203904&quot;,
+ &quot;issue_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1&quot;,
+ &quot;id&quot;: 133203904,
+ &quot;user&quot;: {
+  &quot;login&quot;: &quot;willzfarmer&quot;,
+  &quot;id&quot;: 546524,
+  &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/546524?v=3&quot;,
+  &quot;gravatar_id&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;https://api.github.com/users/willzfarmer&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/willzfarmer&quot;,
+  &quot;followers_url&quot;: &quot;https://api.github.com/users/willzfarmer/followers&quot;,
+  &quot;following_url&quot;: &quot;https://api.github.com/users/willzfarmer/following{/other_user}&quot;,
+  &quot;gists_url&quot;: &quot;https://api.github.com/users/willzfarmer/gists{/gist_id}&quot;,
+  &quot;starred_url&quot;: &quot;https://api.github.com/users/willzfarmer/starred{/owner}{/repo}&quot;,
+  &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/willzfarmer/subscriptions&quot;,
+  &quot;organizations_url&quot;: &quot;https://api.github.com/users/willzfarmer/orgs&quot;,
+  &quot;repos_url&quot;: &quot;https://api.github.com/users/willzfarmer/repos&quot;,
+  &quot;events_url&quot;: &quot;https://api.github.com/users/willzfarmer/events{/privacy}&quot;,
+  &quot;received_events_url&quot;: &quot;https://api.github.com/users/willzfarmer/received_events&quot;,
+  &quot;type&quot;: &quot;User&quot;,
+  &quot;site_admin&quot;: false
+ },
+ &quot;created_at&quot;: &quot;2015-08-20T22:39:50Z&quot;,
+ &quot;updated_at&quot;: &quot;2015-08-20T22:39:50Z&quot;,
+ &quot;body&quot;: &quot;Name: William Farmer\r\nMajor: Applied Math w/ Minor in Computer Science\r\nFavorite Programming Language: Python\r\nFavorite Food: Sushi&quot;
+}</pre>
+
+<p>The person&apos;s name is willzfarmer.</p>
+<h2 id="what-is-willzfarmer-s-favorite-food">What is willzfarmer&apos;s favorite food?</h2>
+<p>We will need to parse the comment to retrieve this data.</p>
+<p>The comment text is</p>
+<pre>&quot;Name: William Farmer\r\nMajor: Applied Math w/ Minor in Computer Science\r\nFavorite Programming Language: Python\r\nFavorite Food: Sushi&quot;</pre>
+
+<p>The code to retrieve the data about the favorite food is (hint: use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split" target="_blank">split()</a>).</p>
+<p><pre>
+<span class="keyword">var</span> text = _.first(data.comments).body
+console.log(text)
+console.log(text.split(<span class="string">&apos;\n&apos;</span>))
+
+<span class="comment">// TODO: add code to process text to get the person&apos;s favorite food</span>
+<span class="keyword">return</span> _.last(text.split(<span class="string">&quot; &quot;</span>))
+</pre><div class="console"><pre>console&gt; &quot;Name: William Farmer\r\nMajor: Applied Math w/ Minor in Computer Science\r\nFavorite Programming Language: Python\r\nFavorite Food: Sushi&quot;
+console&gt; [&quot;Name: William Farmer\r&quot;,&quot;Major: Applied Math w/ Minor in Computer Science\r&quot;,&quot;Favorite Programming Language: Python\r&quot;,&quot;Favorite Food: Sushi&quot;]
+</pre></div></p>
+<p>So, willzfarmer&apos;s favorite food is Sushi.</p>
 
                     
                     </section>
@@ -753,10 +598,10 @@ of the circle to represent the third value.</p>
         </div>
 
         
-        <a href="../../learning/week1/index.html" class="navigation navigation-prev " aria-label="Previous page: Week 1"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/classmates/data.html" class="navigation navigation-prev " aria-label="Previous page: Data"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../learning/week1/lodash.html" class="navigation navigation-next " aria-label="Next page: Lodash"><i class="fa fa-angle-right"></i></a>
+        <a href="../../hackathons/classmates/analysis.html" class="navigation navigation-next " aria-label="Next page: Analysis"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
