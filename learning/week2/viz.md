@@ -17,32 +17,27 @@ including the controls, widgets ...etc.
 
 # How big the deal Tableau really is?
 
-(write your answer based on the statistics you can find online)
+(given the growth of the company and thier revenue, it is clear that they have been very succefull in the last few years. 
+For example thier revenue grew 82% from 2012 ro 2013)
 
-# (Question 1)
+# Who changed thier comment?
 
-![screenshot](screenshot.png)
+![screenshot](change.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(THose whose circle is marked blue and labeled true changed thir comment)
 
-# (Question 2)
+# Who has the oldest account
 
-![screenshot](screenshot.png)
+![screenshot](id.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(Assuming that github ids are assigned in order those who have the smapllest id have the oldest account.
+The chart shows the ids ordered ascending)
 
-# (Question 3)
+#Who wrote the most for thier comment
 
-![screenshot](screenshot.png)
+![screenshot](commentsize.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(The length of the comment(charachters) is represented by the horizantal bars)
 
-# (Question 4)
 
-![screenshot](screenshot.png)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)

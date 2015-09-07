@@ -76,3 +76,12 @@ We can visualize this...
 {% endfor %}
 </svg>
 
+
+names:
+{% lodash %}
+return _.pluck(data.comments, 'body').forEach( function(n){
+	console.log(_.size(n.split("")))});
+{% endlodash %}
+
+{{result | json}}
+
