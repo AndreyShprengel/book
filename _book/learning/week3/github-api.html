@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Data | book</title>
+        <title>Github API | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../hackathons/classmates/warmup.html" />
+    <link rel="next" href="../../learning/week3/lodash-drills.html" />
     
     
-    <link rel="prev" href="../../hackathons/classmates/index.html" />
+    <link rel="prev" href="../../learning/week3/index.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.1" data-basepath="../.." data-revision="Fri Sep 11 2015 11:06:39 GMT-0600 (MDT)">
+    <div class="book" data-level="1.4.1" data-basepath="../.." data-revision="Fri Sep 11 2015 11:06:39 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -278,7 +278,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="learning/week3/github-api.html">
+        <li class="chapter active" data-level="1.4.1" data-path="learning/week3/github-api.html">
             
                 
                     <a href="../../learning/week3/github-api.html">
@@ -416,7 +416,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.2.1" data-path="hackathons/classmates/data.html">
+        <li class="chapter " data-level="2.2.1" data-path="hackathons/classmates/data.html">
             
                 
                     <a href="../../hackathons/classmates/data.html">
@@ -591,9 +591,68 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="data">Data</h1>
-<p>There are 26 comments.</p>
-<p>The raw data is in the JSON format and is shown below.</p>
+                        <h1 id="github-api">Github API</h1>
+<p>The objective is to learn how to use Github&apos;s API to pull in real data. Your need
+to figure out how to compose an URL for accessing a particular API to grab the data
+you want.</p>
+<p>Github provides a wide range of APIs. We will focus on these three for now.</p>
+<ul>
+<li><a href="https://developer.github.com/v3/issues/" target="_blank">Issues API</a></li>
+<li><a href="https://developer.github.com/v3/users/" target="_blank">Users API</a></li>
+<li><a href="https://developer.github.com/v3/repos/" target="_blank">Repositories API</a></li>
+</ul>
+<p>Carefully go through the examples below.</p>
+<h3 id="what-is-the-data-of-the-first-issue">What is the data of the first issue?</h3>
+<p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/repos/bigdatahci2015/forum/issues/1</div></div></p>
+<p>The data is saved in <code>data</code>. It looks like below.</p>
+<pre style="font-size:11px;line-height:1;max-height:300px;">{
+ &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1&quot;,
+ &quot;labels_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1/labels{/name}&quot;,
+ &quot;comments_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1/comments&quot;,
+ &quot;events_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1/events&quot;,
+ &quot;html_url&quot;: &quot;https://github.com/bigdatahci2015/forum/issues/1&quot;,
+ &quot;id&quot;: 102129972,
+ &quot;number&quot;: 1,
+ &quot;title&quot;: &quot;Introduction&quot;,
+ &quot;user&quot;: {
+  &quot;login&quot;: &quot;doubleshow&quot;,
+  &quot;id&quot;: 129562,
+  &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/129562?v=3&quot;,
+  &quot;gravatar_id&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;https://api.github.com/users/doubleshow&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/doubleshow&quot;,
+  &quot;followers_url&quot;: &quot;https://api.github.com/users/doubleshow/followers&quot;,
+  &quot;following_url&quot;: &quot;https://api.github.com/users/doubleshow/following{/other_user}&quot;,
+  &quot;gists_url&quot;: &quot;https://api.github.com/users/doubleshow/gists{/gist_id}&quot;,
+  &quot;starred_url&quot;: &quot;https://api.github.com/users/doubleshow/starred{/owner}{/repo}&quot;,
+  &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/doubleshow/subscriptions&quot;,
+  &quot;organizations_url&quot;: &quot;https://api.github.com/users/doubleshow/orgs&quot;,
+  &quot;repos_url&quot;: &quot;https://api.github.com/users/doubleshow/repos&quot;,
+  &quot;events_url&quot;: &quot;https://api.github.com/users/doubleshow/events{/privacy}&quot;,
+  &quot;received_events_url&quot;: &quot;https://api.github.com/users/doubleshow/received_events&quot;,
+  &quot;type&quot;: &quot;User&quot;,
+  &quot;site_admin&quot;: false
+ },
+ &quot;labels&quot;: [],
+ &quot;state&quot;: &quot;open&quot;,
+ &quot;locked&quot;: false,
+ &quot;assignee&quot;: null,
+ &quot;milestone&quot;: null,
+ &quot;comments&quot;: 28,
+ &quot;created_at&quot;: &quot;2015-08-20T12:43:48Z&quot;,
+ &quot;updated_at&quot;: &quot;2015-09-11T13:57:02Z&quot;,
+ &quot;closed_at&quot;: null,
+ &quot;body&quot;: &quot;Name: Tom Yeh\r\nDepartment: Computer Science\r\nFavorite Programming Language: Javascript\r\nFavorite Food: BBQ&quot;,
+ &quot;closed_by&quot;: null
+}</pre>
+
+<h3 id="what-is-the-title-of-the-first-issue">What is the title of the first issue?</h3>
+<p>Introduction</p>
+<h3 id="who-created-this-issue">Who created this issue?</h3>
+<p>doubleshow</p>
+<h3 id="what-are-the-comments-of-this-issue">What are the comments of this issue?</h3>
+<p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/repos/bigdatahci2015/forum/issues/1/comments</div></div></p>
+<p>The comments data look like</p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  {
   &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/comments/133203904&quot;,
@@ -1322,8 +1381,97 @@
   &quot;created_at&quot;: &quot;2015-08-26T22:41:40Z&quot;,
   &quot;updated_at&quot;: &quot;2015-08-26T22:41:40Z&quot;,
   &quot;body&quot;: &quot;Name: Andrew Berumen\r\nDept: CSCI\r\nFavorite Language: Java\r\nFood: Brazilian Churrascuria&quot;
+ },
+ {
+  &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/comments/137885593&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/bigdatahci2015/forum/issues/1#issuecomment-137885593&quot;,
+  &quot;issue_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1&quot;,
+  &quot;id&quot;: 137885593,
+  &quot;user&quot;: {
+   &quot;login&quot;: &quot;jraesly&quot;,
+   &quot;id&quot;: 7478888,
+   &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/7478888?v=3&quot;,
+   &quot;gravatar_id&quot;: &quot;&quot;,
+   &quot;url&quot;: &quot;https://api.github.com/users/jraesly&quot;,
+   &quot;html_url&quot;: &quot;https://github.com/jraesly&quot;,
+   &quot;followers_url&quot;: &quot;https://api.github.com/users/jraesly/followers&quot;,
+   &quot;following_url&quot;: &quot;https://api.github.com/users/jraesly/following{/other_user}&quot;,
+   &quot;gists_url&quot;: &quot;https://api.github.com/users/jraesly/gists{/gist_id}&quot;,
+   &quot;starred_url&quot;: &quot;https://api.github.com/users/jraesly/starred{/owner}{/repo}&quot;,
+   &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/jraesly/subscriptions&quot;,
+   &quot;organizations_url&quot;: &quot;https://api.github.com/users/jraesly/orgs&quot;,
+   &quot;repos_url&quot;: &quot;https://api.github.com/users/jraesly/repos&quot;,
+   &quot;events_url&quot;: &quot;https://api.github.com/users/jraesly/events{/privacy}&quot;,
+   &quot;received_events_url&quot;: &quot;https://api.github.com/users/jraesly/received_events&quot;,
+   &quot;type&quot;: &quot;User&quot;,
+   &quot;site_admin&quot;: false
+  },
+  &quot;created_at&quot;: &quot;2015-09-05T00:12:12Z&quot;,
+  &quot;updated_at&quot;: &quot;2015-09-05T00:12:12Z&quot;,
+  &quot;body&quot;: &quot;Name: John Raesly\r\nDepartment: CSCI\r\nFavorite Language: Python\r\nFavorite Food: Vietnamese &quot;
+ },
+ {
+  &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/comments/138376056&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/bigdatahci2015/forum/issues/1#issuecomment-138376056&quot;,
+  &quot;issue_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1&quot;,
+  &quot;id&quot;: 138376056,
+  &quot;user&quot;: {
+   &quot;login&quot;: &quot;doubleshow&quot;,
+   &quot;id&quot;: 129562,
+   &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/129562?v=3&quot;,
+   &quot;gravatar_id&quot;: &quot;&quot;,
+   &quot;url&quot;: &quot;https://api.github.com/users/doubleshow&quot;,
+   &quot;html_url&quot;: &quot;https://github.com/doubleshow&quot;,
+   &quot;followers_url&quot;: &quot;https://api.github.com/users/doubleshow/followers&quot;,
+   &quot;following_url&quot;: &quot;https://api.github.com/users/doubleshow/following{/other_user}&quot;,
+   &quot;gists_url&quot;: &quot;https://api.github.com/users/doubleshow/gists{/gist_id}&quot;,
+   &quot;starred_url&quot;: &quot;https://api.github.com/users/doubleshow/starred{/owner}{/repo}&quot;,
+   &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/doubleshow/subscriptions&quot;,
+   &quot;organizations_url&quot;: &quot;https://api.github.com/users/doubleshow/orgs&quot;,
+   &quot;repos_url&quot;: &quot;https://api.github.com/users/doubleshow/repos&quot;,
+   &quot;events_url&quot;: &quot;https://api.github.com/users/doubleshow/events{/privacy}&quot;,
+   &quot;received_events_url&quot;: &quot;https://api.github.com/users/doubleshow/received_events&quot;,
+   &quot;type&quot;: &quot;User&quot;,
+   &quot;site_admin&quot;: false
+  },
+  &quot;created_at&quot;: &quot;2015-09-07T20:52:25Z&quot;,
+  &quot;updated_at&quot;: &quot;2015-09-07T20:52:25Z&quot;,
+  &quot;body&quot;: &quot;It&apos;s great you started early. Please wait a little bit. I am finalizing the few more final touches on the exercises and will release soon.&quot;
  }
 ]</pre>
+
+<p>There are 28 comments.</p>
+<p><pre>
+<span class="keyword">return</span> _.pluck(data, <span class="string">&apos;user.login&apos;</span>)
+</pre></p>
+<p>The github account names are willzfarmer,twagar95,Malaokia,fadhilfath,hswitte,ZachLamb,zhya215,jocr1627,drewdinger,94kazakov,nicolele,satchelspencer,tiro6090,Linenfelser,KevinKGifford,calebhsu,sumi6109,pail4944,DomoYeti,boanding,kjblakemore,SankethSukumarShetty,AndreyShprengel,co-bri,karisantos,anbe6083,jraesly,doubleshow.</p>
+<h1 id="exercises">Exercises</h1>
+<p>Now it&apos;s your turn to answer the following questions using the real data.</p>
+<h3 id="how-many-issues-have-been-created-to-date-in-our-class-s-forum-repository">How many issues have been created to date in our class&apos;s forum repository?</h3>
+<p></p>
+<p><pre>
+<span class="comment">// add lodash code to process the data and generate the answer</span>
+<span class="keyword">return</span> <span class="string">&apos;something&apos;</span>
+</pre></p>
+<h3 id="what-are-the-titles-of-these-issues">What are the titles of these issues?</h3>
+<p>(answer)</p>
+<h3 id="how-many-repository-have-been-created-to-date-for-our-class">How many repository have been created to date for our class?</h3>
+<p>Our class&apos;s Github organization is <a href="https://github.com/bigdatahci2015/" target="_blank">bigdatahci2015</a>.</p>
+<p></p>
+<p><pre>
+<span class="comment">// add lodash code to process the data and generate the answer</span>
+<span class="keyword">return</span> <span class="string">&apos;something&apos;</span>
+</pre></p>
+<h3 id="what-are-the-fork-counts-of-our-class-s-repositories">What are the fork counts of our class&apos;s repositories?</h3>
+<p>(answer)</p>
+<h3 id="how-many-public-repositories-does-the-user-doubleshow-have">How many public repositories does the user <code>doubleshow</code> have?</h3>
+<p></p>
+<p><pre>
+<span class="comment">// add lodash code to process the data and generate the answer</span>
+<span class="keyword">return</span> <span class="string">&apos;something&apos;</span>
+</pre></p>
+<h3 id="how-many-public-gists-does-the-user-doubleshow-have">How many public gists does the user <code>doubleshow</code> have?</h3>
+<p>(answer)</p>
 
                     
                     </section>
@@ -1334,10 +1482,10 @@
         </div>
 
         
-        <a href="../../hackathons/classmates/index.html" class="navigation navigation-prev " aria-label="Previous page: Classmates"><i class="fa fa-angle-left"></i></a>
+        <a href="../../learning/week3/index.html" class="navigation navigation-prev " aria-label="Previous page: Week 3"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/classmates/warmup.html" class="navigation navigation-next " aria-label="Next page: Warmup"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week3/lodash-drills.html" class="navigation navigation-next " aria-label="Next page: Lodash Drills"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

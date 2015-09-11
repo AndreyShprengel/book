@@ -1,0 +1,1300 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book book -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Lodash GroupBy | book</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/highlight.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../hackathons/index.html" />
+    
+    
+    <link rel="prev" href="../../learning/week3/lodash-drills.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book" data-level="1.4.3" data-basepath="../.." data-revision="Fri Sep 11 2015 11:06:39 GMT-0600 (MDT)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="learning/index.html">
+            
+                
+                    <a href="../../learning/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Learning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="learning/intro/index.html">
+            
+                
+                    <a href="../../learning/intro/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Intro
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="learning/intro/q-big-data.html">
+            
+                
+                    <a href="../../learning/intro/q-big-data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Q. Big data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="learning/intro/q-language.html">
+            
+                
+                    <a href="../../learning/intro/q-language.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Q. Programming language
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="learning/intro/q-packages.html">
+            
+                
+                    <a href="../../learning/intro/q-packages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        Q. Packages
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="learning/week1/index.html">
+            
+                
+                    <a href="../../learning/week1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Week 1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="learning/week1/svg-template.html">
+            
+                
+                    <a href="../../learning/week1/svg-template.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        Template Engine
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="learning/week1/lodash.html">
+            
+                
+                    <a href="../../learning/week1/lodash.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        Lodash
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="learning/week2/index.html">
+            
+                
+                    <a href="../../learning/week2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Week 2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="learning/week2/report.html">
+            
+                
+                    <a href="../../learning/week2/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="learning/week2/viz.html">
+            
+                
+                    <a href="../../learning/week2/viz.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Tableau Viz
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="learning/week3/index.html">
+            
+                
+                    <a href="../../learning/week3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Week 3
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="learning/week3/github-api.html">
+            
+                
+                    <a href="../../learning/week3/github-api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.1.</b>
+                        
+                        Github API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="learning/week3/lodash-drills.html">
+            
+                
+                    <a href="../../learning/week3/lodash-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.2.</b>
+                        
+                        Lodash Drills
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="learning/week3/lodash-groupby.html">
+            
+                
+                    <a href="../../learning/week3/lodash-groupby.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.3.</b>
+                        
+                        Lodash GroupBy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="hackathons/index.html">
+            
+                
+                    <a href="../../hackathons/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Hackathons
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="hackathons/tinker/index.html">
+            
+                
+                    <a href="../../hackathons/tinker/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Tinker
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="hackathons/tinker/method.html">
+            
+                
+                    <a href="../../hackathons/tinker/method.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        Method
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="hackathons/tinker/report.html">
+            
+                
+                    <a href="../../hackathons/tinker/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="hackathons/classmates/index.html">
+            
+                
+                    <a href="../../hackathons/classmates/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Classmates
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="hackathons/classmates/data.html">
+            
+                
+                    <a href="../../hackathons/classmates/data.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Data
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
+            
+                
+                    <a href="../../hackathons/classmates/warmup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        Warmup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+            
+                
+                    <a href="../../hackathons/classmates/analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="hackathons/classmates/report.html">
+            
+                
+                    <a href="../../hackathons/classmates/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >book</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="lodash-groupby">Lodash GroupBy</h1>
+<p>In this section, you will learn to utilize Lodash <code>_.groupBy</code> to perform some simple
+aggregate analysis.</p>
+<p>Some of the Lodash functions you will use are:</p>
+<ul>
+<li><a href="https://lodash.com/docs#groupBy" target="_blank">_.groupBy</a></li>
+<li><a href="https://lodash.com/docs#keys" target="_blank">_.keys</a></li>
+<li><a href="https://lodash.com/docs#mapValues" target="_blank">_.mapValues</a></li>
+</ul>
+<p>First, study the working examples below carefully. Then, complete the exercises that follow.</p>
+<h2 id="examples">Examples</h2>
+<p></p><h2>Group people by age (teens, 20s, 30s, 40s, 50s)</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;1&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;age&quot;: 15
+    }
+  ],
+  &quot;3&quot;: [
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;age&quot;: 35
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;age&quot;: 35
+    }
+  ],
+  &quot;4&quot;: [
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;age&quot;: 42
+    },
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;age&quot;: 42
+    },
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;age&quot;: 46
+    }
+  ],
+  &quot;5&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;age&quot;: 54
+    }
+  ]
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>{
+  &quot;1&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;age&quot;: 15
+    }
+  ],
+  &quot;3&quot;: [
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;age&quot;: 35
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;age&quot;: 35
+    }
+  ],
+  &quot;4&quot;: [
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;age&quot;: 42
+    },
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;age&quot;: 42
+    },
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;age&quot;: 46
+    }
+  ],
+  &quot;5&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;age&quot;: 54
+    }
+  ]
+}</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = _.groupBy(data, <span class="keyword">function</span>(d){
+        <span class="keyword">return</span> Math.floor(d.age / <span class="number">10</span>)    
+    })
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are the age groups?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;1&quot;,
+  &quot;3&quot;,
+  &quot;4&quot;,
+  &quot;5&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
+  &quot;1&quot;,
+  &quot;3&quot;,
+  &quot;4&quot;,
+  &quot;5&quot;
+]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> groups = _.groupBy(data, <span class="keyword">function</span>(d){
+        <span class="keyword">return</span> Math.floor(d.age / <span class="number">10</span>)    
+    })
+
+<span class="keyword">var</span> result = _.keys(groups)
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many people are in each age group?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;1&quot;: 1,
+  &quot;3&quot;: 2,
+  &quot;4&quot;: 3,
+  &quot;5&quot;: 1
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>{
+  &quot;1&quot;: 1,
+  &quot;3&quot;: 2,
+  &quot;4&quot;: 3,
+  &quot;5&quot;: 1
+}</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> groups = _.groupBy(data, <span class="keyword">function</span>(d){
+        <span class="keyword">return</span> Math.floor(d.age / <span class="number">10</span>)    
+    })
+
+<span class="keyword">var</span> result = _.mapValues(groups, <span class="keyword">function</span>(value){
+        <span class="keyword">return</span> value.length
+    })
+<span class="keyword">return</span> result</pre></div><p></p>
+<h2 id="exercises">Exercises</h2>
+<p></p><h2>Who is the first person in each age group?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;1&quot;: &quot;Peter Pan&quot;,
+  &quot;3&quot;: &quot;Kelly Fan&quot;,
+  &quot;4&quot;: &quot;Mary Smith&quot;,
+  &quot;5&quot;: &quot;John Smith&quot;
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Group people by their last name</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Smith&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;age&quot;: 54
+    },
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;age&quot;: 42
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;age&quot;: 35
+    }
+  ],
+  &quot;Pan&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;age&quot;: 15
+    }
+  ],
+  &quot;Fan&quot;: [
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;age&quot;: 35
+    }
+  ],
+  &quot;Potts&quot;: [
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;age&quot;: 42
+    }
+  ],
+  &quot;Johnson&quot;: [
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;age&quot;: 46
+    }
+  ]
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many people are in each last-name group?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Smith&quot;: 3,
+  &quot;Pan&quot;: 1,
+  &quot;Fan&quot;: 1,
+  &quot;Potts&quot;: 1,
+  &quot;Johnson&quot;: 1
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Who is the first person in each last-name group?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54},
+ {name: &apos;Mary Smith&apos;, age: 42},
+ {name: &apos;Peter Pan&apos;, age: 15},
+ {name: &apos;Kelly Fan&apos;, age: 35},
+ {name: &apos;Adam Potts&apos;, age: 42},
+ {name: &apos;Joe Johnson&apos;, age: 46},
+ {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Smith&quot;: &quot;John Smith&quot;,
+  &quot;Pan&quot;: &quot;Peter Pan&quot;,
+  &quot;Fan&quot;: &quot;Kelly Fan&quot;,
+  &quot;Potts&quot;: &quot;Adam Potts&quot;,
+  &quot;Johnson&quot;: &quot;Joe Johnson&quot;
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are all person-favorite pairs?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;]},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;]},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  {
+    &quot;name&quot;: &quot;John Smith&quot;,
+    &quot;favorite&quot;: &quot;food&quot;
+  },
+  {
+    &quot;name&quot;: &quot;John Smith&quot;,
+    &quot;favorite&quot;: &quot;travel&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Mary Smith&quot;,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Mary Smith&quot;,
+    &quot;favorite&quot;: &quot;travel&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Peter Pan&quot;,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Peter Pan&quot;,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Peter Pan&quot;,
+    &quot;favorite&quot;: &quot;gardening&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Kelly Fan&quot;,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Kelly Fan&quot;,
+    &quot;favorite&quot;: &quot;travel&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Kelly Fan&quot;,
+    &quot;favorite&quot;: &quot;programming&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Adam Potts&quot;,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Adam Potts&quot;,
+    &quot;favorite&quot;: &quot;food&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Joe Johnson&quot;,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Joe Johnson&quot;,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Joe Johnson&quot;,
+    &quot;favorite&quot;: &quot;music&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Ben Smith&quot;,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Ben Smith&quot;,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Ben Smith&quot;,
+    &quot;favorite&quot;: &quot;programming&quot;
+  }
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// hint: use nested _.map, then  _.flatten</span>
+
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are all age-favorite pairs (in ascending order)?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;]},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;]},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  {
+    &quot;age&quot;: 15,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;age&quot;: 15,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;age&quot;: 15,
+    &quot;favorite&quot;: &quot;gardening&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;travel&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;programming&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;movies&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;age&quot;: 35,
+    &quot;favorite&quot;: &quot;programming&quot;
+  },
+  {
+    &quot;age&quot;: 42,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;age&quot;: 42,
+    &quot;favorite&quot;: &quot;travel&quot;
+  },
+  {
+    &quot;age&quot;: 42,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;age&quot;: 42,
+    &quot;favorite&quot;: &quot;food&quot;
+  },
+  {
+    &quot;age&quot;: 46,
+    &quot;favorite&quot;: &quot;tv&quot;
+  },
+  {
+    &quot;age&quot;: 46,
+    &quot;favorite&quot;: &quot;sports&quot;
+  },
+  {
+    &quot;age&quot;: 46,
+    &quot;favorite&quot;: &quot;music&quot;
+  },
+  {
+    &quot;age&quot;: 54,
+    &quot;favorite&quot;: &quot;food&quot;
+  },
+  {
+    &quot;age&quot;: 54,
+    &quot;favorite&quot;: &quot;travel&quot;
+  }
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// hint: use nested _.map, then  _.flatten</span>
+
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Group people by their favorites.</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;]},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;]},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;food&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;favorite&quot;: &quot;food&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;favorite&quot;: &quot;food&quot;
+    }
+  ],
+  &quot;travel&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;favorite&quot;: &quot;travel&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;favorite&quot;: &quot;travel&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;favorite&quot;: &quot;travel&quot;
+    }
+  ],
+  &quot;sports&quot;: [
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;favorite&quot;: &quot;sports&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;favorite&quot;: &quot;sports&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;favorite&quot;: &quot;sports&quot;
+    }
+  ],
+  &quot;movies&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;favorite&quot;: &quot;movies&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;favorite&quot;: &quot;movies&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;favorite&quot;: &quot;movies&quot;
+    }
+  ],
+  &quot;tv&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;favorite&quot;: &quot;tv&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;favorite&quot;: &quot;tv&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;favorite&quot;: &quot;tv&quot;
+    }
+  ],
+  &quot;gardening&quot;: [
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;favorite&quot;: &quot;gardening&quot;
+    }
+  ],
+  &quot;programming&quot;: [
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;favorite&quot;: &quot;programming&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;favorite&quot;: &quot;programming&quot;
+    }
+  ],
+  &quot;music&quot;: [
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;favorite&quot;: &quot;music&quot;
+    }
+  ]
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// hint: first, apply _.groupBy to the name-favovrite pairs computed earlier</span>
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are the names of the people in these &apos;favorite&apos; groups?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;]},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;]},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;food&quot;: [
+    &quot;John Smith&quot;,
+    &quot;Adam Potts&quot;
+  ],
+  &quot;travel&quot;: [
+    &quot;John Smith&quot;,
+    &quot;Mary Smith&quot;,
+    &quot;Kelly Fan&quot;
+  ],
+  &quot;sports&quot;: [
+    &quot;Mary Smith&quot;,
+    &quot;Adam Potts&quot;,
+    &quot;Joe Johnson&quot;
+  ],
+  &quot;movies&quot;: [
+    &quot;Peter Pan&quot;,
+    &quot;Kelly Fan&quot;,
+    &quot;Ben Smith&quot;
+  ],
+  &quot;tv&quot;: [
+    &quot;Peter Pan&quot;,
+    &quot;Joe Johnson&quot;,
+    &quot;Ben Smith&quot;
+  ],
+  &quot;gardening&quot;: [
+    &quot;Peter Pan&quot;
+  ],
+  &quot;programming&quot;: [
+    &quot;Kelly Fan&quot;,
+    &quot;Ben Smith&quot;
+  ],
+  &quot;music&quot;: [
+    &quot;Joe Johnson&quot;
+  ]
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are the sizes of these &apos;favorite&apos; groups?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;]},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;]},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;food&quot;: 2,
+  &quot;travel&quot;: 3,
+  &quot;sports&quot;: 3,
+  &quot;movies&quot;: 3,
+  &quot;tv&quot;: 3,
+  &quot;gardening&quot;: 1,
+  &quot;programming&quot;: 2,
+  &quot;music&quot;: 1
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Group people by city</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Denver&quot;: [
+    {
+      &quot;name&quot;: &quot;John Smith&quot;,
+      &quot;age&quot;: 54,
+      &quot;favorites&quot;: [
+        &quot;food&quot;,
+        &quot;travel&quot;
+      ],
+      &quot;city&quot;: &quot;Denver&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Peter Pan&quot;,
+      &quot;age&quot;: 15,
+      &quot;favorites&quot;: [
+        &quot;movies&quot;,
+        &quot;tv&quot;,
+        &quot;gardening&quot;
+      ],
+      &quot;city&quot;: &quot;Denver&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Adam Potts&quot;,
+      &quot;age&quot;: 42,
+      &quot;favorites&quot;: [
+        &quot;sports&quot;,
+        &quot;food&quot;
+      ],
+      &quot;city&quot;: &quot;Denver&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Joe Johnson&quot;,
+      &quot;age&quot;: 46,
+      &quot;favorites&quot;: [
+        &quot;tv&quot;,
+        &quot;sports&quot;,
+        &quot;music&quot;
+      ],
+      &quot;city&quot;: &quot;Denver&quot;
+    }
+  ],
+  &quot;Boulder&quot;: [
+    {
+      &quot;name&quot;: &quot;Mary Smith&quot;,
+      &quot;age&quot;: 42,
+      &quot;favorites&quot;: [
+        &quot;sports&quot;,
+        &quot;travel&quot;
+      ],
+      &quot;city&quot;: &quot;Boulder&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Kelly Fan&quot;,
+      &quot;age&quot;: 35,
+      &quot;favorites&quot;: [
+        &quot;movies&quot;,
+        &quot;travel&quot;,
+        &quot;programming&quot;
+      ],
+      &quot;city&quot;: &quot;Boulder&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Ben Smith&quot;,
+      &quot;age&quot;: 35,
+      &quot;favorites&quot;: [
+        &quot;movies&quot;,
+        &quot;tv&quot;,
+        &quot;programming&quot;
+      ],
+      &quot;city&quot;: &quot;Boulder&quot;
+    }
+  ]
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Group people by city and count how many people in each city</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Denver&quot;: 4,
+  &quot;Boulder&quot;: 3
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What is the oldest age in each city?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Denver&quot;: 54,
+  &quot;Boulder&quot;: 42
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many Smith&apos;s are in each city?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;travel&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;travel&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;gardening&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Kelly Fan&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;travel&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;},
+ {name: &apos;Adam Potts&apos;, age: 42, favorites: [&apos;sports&apos;, &apos;food&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;tv&apos;, &apos;sports&apos;,&apos;music&apos;], city: &apos;Denver&apos;},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;movies&apos;, &apos;tv&apos;, &apos;programming&apos;], city: &apos;Boulder&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>{
+  &quot;Denver&quot;: 1,
+  &quot;Boulder&quot;: 2
+}</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../learning/week3/lodash-drills.html" class="navigation navigation-prev " aria-label="Previous page: Lodash Drills"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../hackathons/index.html" class="navigation navigation-next " aria-label="Next page: Hackathons"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book book -->
+</html>
