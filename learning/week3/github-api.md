@@ -56,46 +56,63 @@ Now it's your turn to answer the following questions using the real data.
 ### How many issues have been created to date in our class's forum repository?
 
 {% githubapi %}
-// enter the URL to access the Github API to get the data for this question
-{% endgithubapi %}
+https://api.github.com/repos/bigdatahci2015/forum/issues {% endgithubapi %}
 
 {% lodash %}
-// add lodash code to process the data and generate the answer
-return 'something'
+return _.size(data)
 {% endlodash %}
 
-### What are the titles of these issues?
+There are {{ result}} issues
 
-(answer)
+### What are the titles of these issues?
+{% lodash %}
+return _.pluck(data, 'title')
+{% endlodash %}
+
+{{ result |json}}
 
 ### How many repository have been created to date for our class?
 
 Our class's Github organization is [bigdatahci2015](https://github.com/bigdatahci2015/).
 
 {% githubapi %}
-// enter the URL to access the Github API to get the data for this question
-{% endgithubapi %}
+https://api.github.com/orgs/bigdatahci2015/repos{% endgithubapi %}
 
 {% lodash %}
-// add lodash code to process the data and generate the answer
-return 'something'
+
+return _.size(data)
 {% endlodash %}
 
-### What are the fork counts of our class's repositories?
+There are {{result}} repos
 
-(answer)
+{{data |json }}
+return _.chain(data)
+            .map(function(obj) {
+                return [obj["name"], obj["forks_count"]];
+            })
+
+{{result | json}}
 
 ### How many public repositories does the user `doubleshow` have?
 
 {% githubapi %}
-// enter the URL to access the Github API to get the data for this question
+https://api.github.com/users/doubleshow/repos
+{% endgithubapi %}
+{% lodash %}
+
+return _.size(data)
+{% endlodash %}
+
+There are {{result}} repos
+
+
+### How many public gists does the user `doubleshow` have?
+{% githubapi %}
+https://api.github.com/users/doubleshow
 {% endgithubapi %}
 
 {% lodash %}
-// add lodash code to process the data and generate the answer
-return 'something'
+
+return data["public_gists"] 
 {% endlodash %}
-
-### How many public gists does the user `doubleshow` have?
-
-(answer)
+There are {{result}} gists
