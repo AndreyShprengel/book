@@ -74,9 +74,9 @@ What names begin with the letter J?
 
 {% solution %}
 
-var result = 'not done'
-return result
-
+return _.map(_.filter(data, function(n) { return n.name.charAt(0) == 'J'}), function(d){
+    return d.name
+})
 {% endlodashexercise %}
 
 
@@ -96,8 +96,8 @@ How many Johns?
 3
 
 {% solution %}
-var result = 'not done'
-return result
+return _.size(_.filter( data, function(n) { return n.name == 'John'}))
+
 
 {% endlodashexercise %}
 
@@ -119,8 +119,9 @@ What are all the first names?
 ["John","Mary","Peter","Ben"]
 
 {% solution %}
-var result = 'not done'
-return result
+return _.map(data,function(obj) {
+                    return obj["name"].split(" ")[0];
+                })
 
 {% endlodashexercise %}
 
@@ -145,8 +146,11 @@ What are the first names of Smith?
 ["John","Mary","Ben"]
 
 {% solution %}
-var result = 'not done'
-return result
+return _.map(_.filter(data, function(obj) {
+                    return obj.name.split(" ")[1] == 'Smith'
+                } ),function(obj) {
+                    return obj.name.split(" ")[0];
+                })
 {% endlodashexercise %}
 
 
@@ -170,8 +174,7 @@ Change the format to lastname, firstname
 [{name: 'Smith, John'}, {name: 'Kay, Mary'}, {name: 'Pan, Peter'}]
 
 {% solution %}
-var result = 'not done'
-return result
+return _.map( data, function(n){ return {"name" : n.name.split(" ")[1] + ", "  + n.name.split(" ")[0] };})
 {% endlodashexercise %}
 
 
@@ -192,8 +195,7 @@ How many women?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.size(_.filter( data, function(n){ return n.gender == 'f'}))
 
 {% endlodashexercise %}
 
@@ -219,8 +221,7 @@ How many men whose last name is Smith?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.size(_.filter( data, function(n){ return n.gender == 'm' && n.name.split(" ")[1] == 'Smith' }))
 
 {% endlodashexercise %}
 
@@ -244,8 +245,10 @@ true
 
 {% solution %}
 
-var result = 'not done'
-return result
+men =  _.size(_.filter( data, function(n){ return n.gender == 'm'}))
+women =  _.size(_.filter( data, function(n){ return n.gender == 'f'}))
+
+return men > women
 
 {% endlodashexercise %}
 
@@ -271,8 +274,7 @@ What is Peter Pan's gender?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.find(data, {name: 'Peter Pan'}).gender
 
 {% endlodashexercise %}
 
@@ -296,8 +298,7 @@ What is the oldest age?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.last(_.sortBy(data, 'age')).age
 
 {% endlodashexercise %}
 
@@ -323,8 +324,7 @@ true
 {% solution %}
 
 // use _.all
-var result = 'not done'
-return result
+return _.all(data, function(n){ return n.age < 60 })
 
 {% endlodashexercise %}
 
@@ -348,8 +348,7 @@ true
 {% solution %}
 
 // use _.some
-var result = 'not done'
-return result
+return _.some(data, function(n){ return n.age < 18 })
 
 {% endlodashexercise %}
 
@@ -375,8 +374,7 @@ How many people whose favorites include food?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.size(_.filter(data, function(n) { return _.contains(n.favorites, 'food') } ))
 
 {% endlodashexercise %}
 
@@ -404,8 +402,7 @@ Who are over 40 and love travel?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.pluck(_.filter(data, function(n) { return _.contains(n.favorites, 'travel') && n.age > 40 }), 'name')
 
 {% endlodashexercise %}
 
@@ -432,8 +429,7 @@ Who is the oldest person loving food?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.last(_.sortBy( _.filter(data, function(n) { return _.contains(n.favorites, 'food') }), 'age')).name
 
 {% endlodashexercise %}
 
@@ -468,8 +464,7 @@ What are all the unique favorites?
 
 // hint: use _.pluck, _.uniq, _.flatten in some order
 
-var result = 'not done'
-return result
+return _.uniq(_.flatten(_.pluck(data, "favorites")))
 
 {% endlodashexercise %}
 
@@ -499,7 +494,6 @@ What are all the unique last names?
 
 {% solution %}
 
-var result = 'not done'
-return result
+return _.uniq(_.map(data, function(n) { return n.name.split(" ")[1]}))
 
 {% endlodashexercise %}
