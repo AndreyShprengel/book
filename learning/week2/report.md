@@ -1,11 +1,3 @@
-{% import '../../hackathons/classmates/data.html' as data %}
-
-# Report
-
-There are {{ data.comments.length }} students who gave a self-introduction. As a
-class, we brainstormed and came up with a long list of further questions we can
-ask based on this data. Our team chose to tackle on the following:
-
 {% import './data.html' as data %}
 
 # Report
@@ -75,13 +67,3 @@ We can visualize this...
 <rect x="{{ 25 * (loop.index - 1) }}" y="{{ 100 - ((100 * row) / 20) }}" width="20" height="{{ ((100 * row) / 20) }}" style="fill:#5DA5DA;stroke-width:3;stroke:rgb(0,0,0)" />
 {% endfor %}
 </svg>
-
-
-names:
-{% lodash %}
-return _.pluck(data.comments, 'body').forEach( function(n){
-	console.log(_.size(n.split("")))});
-{% endlodash %}
-
-{{result | json}}
-
