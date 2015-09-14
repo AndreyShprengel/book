@@ -24,3 +24,6 @@
         * [Warmup](hackathons/classmates/warmup.md)
         * [Analysis](hackathons/classmates/analysis.md)
         * [Report](hackathons/classmates/report.md)
+    * [FCQ](hackathons/fcq/index.md)        
+        * [Warmup](hackathons/fcq/warmup.md)
+        * [Report](hackathons/fcq/report.md)
