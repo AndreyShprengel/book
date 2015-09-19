@@ -9,7 +9,8 @@ Next, complete the following warmup exercises as a team.
 
 {% lodash %}
 // TODO: replace with code that computes the actual result
-return 113
+return _.size(_.compact(_.uniq(_.pluck(data, 'Subject'))))
+
 {% endlodash %}
 
 They are {{ result }} unique subject codes.
@@ -18,7 +19,7 @@ They are {{ result }} unique subject codes.
 
 {% lodash %}
 // TODO: replace with code that computes the actual result
-return 63
+return _.size(_.filter(data, function(c){return c.Subject == "CSCI"}))
 {% endlodash %}
 
 They are {{ result }} computer science courses.
@@ -27,7 +28,8 @@ They are {{ result }} computer science courses.
 
 {% lodash %}
 // TODO: replace with code that computes the actual result
-return {"HIST": 78,"HONR": 20,"HUMN": 17,"IAFS": 20,"IPHY": 134}
+var groups = _.groupBy(data, function(c){return c.Subject})
+return _.mapValues(groups, function(group){return _.size(group)})
 {% endlodash %}
 
 <table>
@@ -49,7 +51,7 @@ var ret = _.pick(_.mapValues(grps, function(d){
 }), function(x){
     return x > 100
 })
-return {"IPHY": 134,"MATH": 232,"MCDB": 117,"PHIL": 160,"PSCI": 117}
+return ret
 {% endlodash %}
 
 <table>
@@ -65,10 +67,20 @@ return {"IPHY": 134,"MATH": 232,"MCDB": 117,"PHIL": 160,"PSCI": 117}
 
 {% lodash %}
 // TODO: replace with code that computes the actual result
-return {"IPHY": 5507,"MATH": 8725,"PHIL": 5672,"PHYS": 8099,"PSCI": 5491}
+var grps = _.groupBy(data, 'Subject')
+var enroll = _.mapValues(grps, function(group){
+	var total = 0
+	_.map(group, function(n){
+			total += n.N.ENROLL
+			
+			return total
+				}
+				)
+				return total})
+return _.pick(enroll, function(x) {return x > 5000})
 {% endlodash %}
 
-<table>
+<table>utn
 {% for key, value in result %}
     <tr>
         <td>{{key}}</td>
@@ -81,7 +93,13 @@ return {"IPHY": 5507,"MATH": 8725,"PHIL": 5672,"PHYS": 8099,"PSCI": 5491}
 
 {% lodash %}
 // TODO: replace with code that computes the actual result
-return ['4830','4830']
+var courses = _.filter(data, function(c){
+					
+					return _.some(c.Instructors, function(t){ 
+							
+							return t.name == "YEH, PEI HSIU"})})
+							
+return _.pluck(courses, "Course")
 {% endlodash %}
 
 They are {{result}}.
