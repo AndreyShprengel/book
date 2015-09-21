@@ -19,37 +19,22 @@ how to transform this JSON file into a format that can be fed into Tableau. As
 a junior and senior, you are expected to be able to look around the Internet
 to problem solve.
 
-# (Question 1)
+# (What Major should a student take if they want to have a high gpa?)
 
-![screenshot](screenshot.png)
+![screenshot](q1.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(THe chart about show the subjects' average grade listed in descding order)
 
-# (Question 2)
+# (WHat professors should get fired)
 
-![screenshot](screenshot.png)
+![screenshot](q2.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(THe above show professors with the lowest raing)
 
-# (Question 3)
+# (What subjects have the best classes)
 
-![screenshot](screenshot.png)
+![screenshot](q3.PNG)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+(The size and the color indicate the avareage course rating for the subject)
 
-# (Question 4)
-
-![screenshot](screenshot.png)
-
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
-
-# (Question 5)
-
-![screenshot](screenshot.png)
-
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)    
+ 
