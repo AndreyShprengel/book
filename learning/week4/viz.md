@@ -4,7 +4,7 @@ Using Tableau, create visualization for each question in the report. You will
 work on this independently just like last week.
 
 To include a Tableau visualization in your report, take a screenshot, save it as an image,
-put it in the `learning/week2` folder, and replace `![screenshot](screenshot.png)`  with
+put it in the `learning/week2` folder, and replace `![screenshot](screenshot.git)`  with
 your own image. Please makes sure your screenshot includes the _entire_ Tableau interface
 including the controls, widgets ...etc.
 

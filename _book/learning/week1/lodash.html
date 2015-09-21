@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Sun Sep 20 2015 23:23:52 GMT-0600 (MDT)">
+    <div class="book" data-level="1.2.2" data-basepath="../.." data-revision="Mon Sep 21 2015 15:24:54 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -379,6 +383,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -583,6 +653,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -702,14 +808,10 @@ was it downloaded just last week alone?</p>
 <h3 id="array-of-numbers">Array of numbers</h3>
 <p>Let&apos;s create a data array withthe contents: 1,2,3,4,5. This array has 5 items.</p>
 <p>To get the first item, we can use lodash&apos;s <a href="https://lodash.com/docs#first" target="_blank">_.first</a>.</p>
-<p><pre>
-<span class="keyword">return</span> _.first(data)
-</pre></p>
+<p><pre><code>return _.first(data)</code></pre></p>
 <p>The result is 1.</p>
 <p>To get the first 3 elements, we can use lodash&apos;s <a href="https://lodash.com/docs#take" target="_blank">_.take</a></p>
-<p><pre>
-<span class="keyword">return</span> _.take(data, <span class="number">3</span>)
-</pre></p>
+<p><pre><code>return _.take(data, 3)</code></pre></p>
 <p>The result is 1,2,3.</p>
 <h3 id="array-of-objects">Array of objects</h3>
 <p>Let&apos;s create a data array consisting of objects.</p>
@@ -717,9 +819,7 @@ was it downloaded just last week alone?</p>
 <p>[{&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:45},{&quot;name&quot;:&quot;Mary&quot;,&quot;age&quot;:32},{&quot;name&quot;:&quot;Peter&quot;,&quot;age&quot;:54}]</p>
 <p>To retrieve the name field from each object in this array, lodash&apos;s
 <a href="https://lodash.com/docs#pluck" target="_blank">_.pluck</a> is very handy.</p>
-<p><pre>
-<span class="keyword">return</span> _.pluck(data, <span class="string">&apos;name&apos;</span>)
-</pre></p>
+<p><pre><code>return _.pluck(data, &apos;name&apos;)</code></pre></p>
 <p>The result is John,Mary,Peter.</p>
 <p>We can even display the result nicely as a bullet list</p>
 <ul>
@@ -740,9 +840,7 @@ was it downloaded just last week alone?</p>
 
 <p>Using <a href="https://lodash.com/docs#find" target="_blank">_.find</a>, we can look up an object by its field.</p>
 <p>Let&apos;s try to find out how old Mary is.</p>
-<p><pre>
-<span class="keyword">return</span> _.find(data, {name: <span class="string">&apos;Mary&apos;</span>})
-</pre></p>
+<p><pre><code>return _.find(data, {name: &apos;Mary&apos;})</code></pre></p>
 <p>Mary is 32 years-old.</p>
 <h2 id="challenges">Challenges</h2>
 <p>Now it&apos;s your turn to take the following learning challenges.</p>
@@ -750,34 +848,26 @@ was it downloaded just last week alone?</p>
 <p>The data is</p>
 <p>[{&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:45},{&quot;name&quot;:&quot;Mary&quot;,&quot;age&quot;:32},{&quot;name&quot;:&quot;Peter&quot;,&quot;age&quot;:54},{&quot;name&quot;:&quot;Jane&quot;,&quot;age&quot;:12}]</p>
 <h3 id="q-what-are-the-ages-of-these-people">Q: What are the ages of these people?</h3>
-<p><pre>
-<span class="comment">// replace this code with your solution that uses lodash</span>
-<span class="keyword">return</span> _.pluck(data, <span class="string">&apos;age&apos;</span>)
-</pre></p>
+<p><pre><code>// replace this code with your solution that uses lodash
+return _.pluck(data, &apos;age&apos;)</code></pre></p>
 <p>The names are 45,32,54,12</p>
 <h3 id="q-what-is-the-youngest-age">Q. What is the youngest age?</h3>
-<p><pre>
-<span class="comment">// replace this code with your solution that uses lodash</span>
-<span class="comment">// hint: use _.pluck and _.min</span>
-ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
-<span class="keyword">return</span> _.min(ages)
-</pre></p>
+<p><pre><code>// replace this code with your solution that uses lodash
+// hint: use _.pluck and _.min
+ages = _.pluck(data, &apos;age&apos;)
+return _.min(ages)</code></pre></p>
 <p>The youngest age is 12.</p>
 <h3 id="q-what-is-the-oldest-age">Q. What is the oldest age?</h3>
-<p><pre>
-<span class="comment">// replace this code with your solution that uses lodash</span>
-ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
-<span class="keyword">return</span> _.max(ages)
-</pre></p>
+<p><pre><code>// replace this code with your solution that uses lodash
+ages = _.pluck(data, &apos;age&apos;)
+return _.max(ages)</code></pre></p>
 <p>The oldest age is 54.</p>
 <h3 id="q-who-is-the-youngest-person">Q. Who is the youngest person?</h3>
-<p><pre>
-<span class="comment">// replace this code with your solution that uses lodash</span>
-<span class="comment">// hint: use your previous solution with _.find</span>
-ages = _.pluck(data, <span class="string">&apos;age&apos;</span>)
+<p><pre><code>// replace this code with your solution that uses lodash
+// hint: use your previous solution with _.find
+ages = _.pluck(data, &apos;age&apos;)
 youngest_age = _.min(ages)
-<span class="keyword">return</span> _.find(data,  {age: youngest_age})
-</pre></p>
+return _.find(data,  {age: youngest_age})</code></pre></p>
 <p>The youngest person is Jane.</p>
 
                     
@@ -801,7 +891,19 @@ youngest_age = _.min(ages)
 <script src="../../gitbook/app.js"></script>
 
     
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

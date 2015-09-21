@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Sun Sep 20 2015 23:23:52 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Mon Sep 21 2015 15:24:54 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -379,6 +383,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -583,6 +653,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -698,20 +804,16 @@
 on the &quot;self-introduction&quot; data. Out of these questions, our team chose to tackle on
 the following:</p>
 <h1 id="-who-changed-their-comment">(who changed their comment?)</h1>
-<p><pre>
-<span class="keyword">return</span> _.pluck(_.pluck(_.filter(data.comments, <span class="keyword">function</span>(n){
-<span class="keyword">return</span> (n.created_at != n.updated_at)}), <span class="string">&apos;user&apos;</span>),<span class="string">&apos;login&apos;</span>)
-</pre></p>
+<p><pre><code>return _.pluck(_.pluck(_.filter(data.comments, function(n){
+return (n.created_at != n.updated_at)}), &apos;user&apos;),&apos;login&apos;)</code></pre></p>
 <p>Their names are <pre style="font-size:11px;line-height:1;max-height:300px;">[
  &quot;KevinKGifford&quot;,
  &quot;kjblakemore&quot;
 ]</pre>.</p>
 <h1 id="who-has-the-oldest-account">Who has the oldest account?</h1>
-<p><pre>
-<span class="keyword">return</span> _.pluck(_.sortBy(data.comments, <span class="keyword">function</span>(comment){
-    <span class="keyword">return</span> comment.user.id;
-}), <span class="string">&apos;user.login&apos;</span>);
-</pre></p>
+<p><pre><code>return _.pluck(_.sortBy(data.comments, function(comment){
+	return comment.user.id;
+}), &apos;user.login&apos;);</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  &quot;willzfarmer&quot;,
  &quot;jocr1627&quot;,
@@ -743,12 +845,9 @@ the following:</p>
 
 
 <h1 id="who-wrote-the-most-for-thier-comment">Who wrote the most for thier comment</h1>
-<p><pre>
-<span class="keyword">return</span> _.pluck(_.sortBy(data.comments, <span class="keyword">function</span>(comment){
-        <span class="keyword">return</span> _.size(comment.body.split(<span class="string">&quot;&quot;</span>));
-        }).reverse(), <span class="string">&apos;user.login&apos;</span>);
-
-</pre></p>
+<p><pre><code>return _.pluck(_.sortBy(data.comments, function(comment){
+		return _.size(comment.body.split(&quot;&quot;));
+		}).reverse(), &apos;user.login&apos;);</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  &quot;Linenfelser&quot;,
  &quot;nicolele&quot;,
@@ -779,22 +878,20 @@ the following:</p>
 ]</pre>
 
 <h1 id="when-did-people-post-comments">When did people post comments?</h1>
-<p><pre>
-<span class="keyword">var</span> counts = _.groupBy(_.map(_.pluck(data.comments, <span class="string">&apos;created_at&apos;</span>), <span class="keyword">function</span>(r) {
-    <span class="keyword">return</span> parseInt(r.slice(<span class="number">9</span>, <span class="number">10</span>));
-}), <span class="keyword">function</span>(i) {
-    <span class="keyword">return</span> i;
+<p><pre><code>var counts = _.groupBy(_.map(_.pluck(data.comments, &apos;created_at&apos;), function(r) {
+    return parseInt(r.slice(9, 10));
+}), function(i) {
+    return i;
 });
-<span class="keyword">var</span> vals = [];
-<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {
-    <span class="keyword">try</span> {
+var vals = [];
+for (i = 0; i &lt; 8; i++) {
+    try {
         vals.push(counts[i].length);
-    } <span class="keyword">catch</span>(err) {
-        vals.push(<span class="number">0</span>);
+    } catch(err) {
+        vals.push(0);
     }
 }
-<span class="keyword">return</span> vals;
-</pre></p>
+return vals;</code></pre></p>
 <p>1,2,0,2,16,2,3,0</p>
 <p>We can visualize this...</p>
 <svg style="width:100%;">
@@ -838,7 +935,19 @@ the following:</p>
 <script src="../../gitbook/app.js"></script>
 
     
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
