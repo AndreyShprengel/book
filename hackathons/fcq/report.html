@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -36,6 +40,8 @@
 
         
     
+    
+    <link rel="next" href="../../hackathons/birdstrikes/index.html" />
     
     
     <link rel="prev" href="../../hackathons/fcq/warmup.html" />
@@ -46,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.3.2" data-basepath="../.." data-revision="Sun Sep 20 2015 23:23:52 GMT-0600 (MDT)">
+    <div class="book" data-level="2.3.2" data-basepath="../.." data-revision="Mon Sep 21 2015 15:24:54 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -377,6 +383,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -581,6 +653,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -697,23 +805,21 @@
 can ask based on the FCQ data. Out of these questions, our team chose to tackle on
 the following questions. Each member on our team is reponsible for one question.</p>
 <h1 id="-question-1-what-should-my-major-be-if-i-want-have-a-high-gpa-andreyshprengel">(Question 1) What should my major be if I want have a high gpa (AndreySHprengel)</h1>
-<p><pre>
-<span class="keyword">var</span> grps = _.groupBy(data, <span class="keyword">function</span>(c){<span class="keyword">return</span> c.Subject})
-<span class="keyword">var</span> grades = _.mapValues(grps, <span class="keyword">function</span>(grp){<span class="keyword">return</span> _.compact(_.pluck(grp, <span class="string">&apos;AVG_GRD&apos;</span>))})
+<p><pre><code>var grps = _.groupBy(data, function(c){return c.Subject})
+var grades = _.mapValues(grps, function(grp){return _.compact(_.pluck(grp, &apos;AVG_GRD&apos;))})
 
-<span class="keyword">var</span> grades = _.mapValues(grades, <span class="keyword">function</span>(group){
-    <span class="keyword">var</span> total = <span class="number">0</span>
-    _.map(group, <span class="keyword">function</span>(n){
-            <span class="comment">//console.log()</span>
-            total += n
-            <span class="keyword">return</span> total
-                }
-                )
-                <span class="keyword">return</span> total/(_.size(group))})
-grades = _.map(grades, <span class="keyword">function</span>(value, key){
-    <span class="keyword">return</span> {<span class="string">&quot;subject&quot;</span>: key, <span class="string">&quot;grade&quot;</span>:value}})
-<span class="keyword">return</span> _.sortBy(grades, <span class="string">&quot;grade&quot;</span>).reverse()
-</pre></p>
+var grades = _.mapValues(grades, function(group){
+	var total = 0
+	_.map(group, function(n){
+			//console.log()
+			total += n
+			return total
+				}
+				)
+				return total/(_.size(group))})
+grades = _.map(grades, function(value, key){
+	return {&quot;subject&quot;: key, &quot;grade&quot;:value}})
+return _.sortBy(grades, &quot;grade&quot;).reverse()</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  {
   &quot;subject&quot;: &quot;CSVC&quot;,
@@ -1083,33 +1189,31 @@ grades = _.map(grades, <span class="keyword">function</span>(value, key){
 <h2 id="what-professors-should-be-fired-by-will-farmer">What professors should be fired? by Will Farmer</h2>
 <p>If the professor has a rating less than two standard deviations away, he&apos;s not
 a good one.
-<pre>
-<span class="keyword">var</span> professors =  _.chain(data)
-        .map(<span class="keyword">function</span>(obj) {
-            <span class="keyword">return</span> _.map(obj.Instructors, <span class="keyword">function</span>(inst) {
-                <span class="keyword">return</span> {<span class="string">&quot;name&quot;</span>: inst.name,
-                        <span class="string">&quot;rating&quot;</span>: obj.AvgInstructor}
+<pre><code>var professors =  _.chain(data)
+        .map(function(obj) {
+            return _.map(obj.Instructors, function(inst) {
+                return {&quot;name&quot;: inst.name,
+                        &quot;rating&quot;: obj.AvgInstructor}
             })
         }).flatten()
-        .filter(<span class="keyword">function</span>(obj) {
-            <span class="keyword">return</span> obj.rating;
+        .filter(function(obj) {
+            return obj.rating;
         })
         .value();
-<span class="keyword">var</span> rating_avg = _.reduce(professors, <span class="keyword">function</span>(p, n) {
-            <span class="keyword">return</span> (p + n.rating);
-        }, <span class="number">0</span>) / professors.length;
-<span class="keyword">var</span> rating_stddev = Math.sqrt(_.reduce(professors, <span class="keyword">function</span>(p, n) {
-            <span class="keyword">return</span> (p + Math.pow(n.rating - rating_avg, <span class="number">2</span>));
-        }, <span class="number">0</span>) / professors.length);
-<span class="keyword">return</span> [rating_avg, rating_stddev,
+var rating_avg = _.reduce(professors, function(p, n) {
+            return (p + n.rating);
+        }, 0) / professors.length;
+var rating_stddev = Math.sqrt(_.reduce(professors, function(p, n) {
+            return (p + Math.pow(n.rating - rating_avg, 2));
+        }, 0) / professors.length);
+return [rating_avg, rating_stddev,
      _.chain(professors)
-            .filter(<span class="keyword">function</span>(obj) {
-                <span class="keyword">return</span> (obj.rating &lt; (rating_avg - (<span class="number">2</span> * rating_stddev)));
-            }).map(<span class="keyword">function</span>(obj) {
-                <span class="keyword">return</span> obj.name + <span class="string">&quot;, &quot;</span> + obj.rating.toString();
+            .filter(function(obj) {
+                return (obj.rating &lt; (rating_avg - (2 * rating_stddev)));
+            }).map(function(obj) {
+                return obj.name + &quot;, &quot; + obj.rating.toString();
             }).uniq()
-            .value()];
-</pre>
+            .value()];</code></pre>
 Average professor rating is: 5.173157003808693.
 Standard Deviation is: 0.6577084664913871.</p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
@@ -1290,20 +1394,18 @@ Standard Deviation is: 0.6577084664913871.</p>
  &quot;DE ALWIS, SENARATH P, 3</pre>
 
 <h1 id="what-is-the-average-course-rating-by-department-by-heather-witte">What is the average course rating by department? by Heather Witte</h1>
-<p><pre>
-<span class="keyword">var</span> grps = _.groupBy(data, <span class="string">&apos;Subject&apos;</span>)
-<span class="keyword">var</span> myvar =  _.mapValues(grps, <span class="keyword">function</span>(group){
-    <span class="keyword">var</span> rating = [<span class="number">0</span>,<span class="number">0</span>]
-    _.map(group, <span class="keyword">function</span>(n){
-    	<span class="keyword">if</span> (n.AvgCourse != <span class="keyword">null</span>) {
-    	rating[<span class="number">0</span>] += n.AvgCourse
-    	rating[<span class="number">1</span>] += <span class="number">1</span>}
-    <span class="keyword">return</span> rating
+<p><pre><code>var grps = _.groupBy(data, &apos;Subject&apos;)
+var myvar =  _.mapValues(grps, function(group){
+    var rating = [0,0]
+    _.map(group, function(n){
+    	if (n.AvgCourse != null) {
+    	rating[0] += n.AvgCourse
+    	rating[1] += 1}
+    return rating
     })
-    <span class="keyword">return</span> rating[<span class="number">0</span>]/rating[<span class="number">1</span>]
+    return rating[0]/rating[1]
 })
-<span class="keyword">return</span> myvar
-</pre></p>
+return myvar</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">{
  &quot;HIST&quot;: 4.925072463768115,
  &quot;HONR&quot;: 5.470909090909092,
@@ -1421,13 +1523,9 @@ Standard Deviation is: 0.6577084664913871.</p>
 }</pre>
 
 <h1 id="-question-4-by-name">(Question 4) by (Name)</h1>
-<p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
-</pre></p>
+<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
 <h1 id="-question-5-by-name">(Question 5) by (Name)</h1>
-<p><pre>
-<span class="keyword">return</span> <span class="string">&quot;[answer]&quot;</span>
-</pre></p>
+<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
 
                     
                     </section>
@@ -1438,8 +1536,10 @@ Standard Deviation is: 0.6577084664913871.</p>
         </div>
 
         
-        <a href="../../hackathons/fcq/warmup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/fcq/warmup.html" class="navigation navigation-prev " aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../../hackathons/birdstrikes/index.html" class="navigation navigation-next " aria-label="Next page: Birdstrikes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
@@ -1448,7 +1548,19 @@ Standard Deviation is: 0.6577084664913871.</p>
 <script src="../../gitbook/app.js"></script>
 
     
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
