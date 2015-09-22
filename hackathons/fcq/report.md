@@ -89,8 +89,9 @@ return myvar
 return "[answer]"
 {% endlodash %}
 
-# (Question 5) by (Name)
+# (what class is CONV)
 
 {% lodash %}
-return "[answer]"
+return _.filter(data, function(c){return c.Subject == 'CONV'})
 {% endlodash %}
+{{result | json }}
