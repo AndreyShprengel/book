@@ -52,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Mon Sep 21 2015 18:09:03 GMT-0600 (MDT)">
+    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Sat Sep 26 2015 12:49:00 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -810,16 +810,235 @@ Utilize <code>_.map</code>, <code>_.filter</code>, <code>_.group</code> ...etc. 
 <p>This time, the data is not already prepared for you in a nice JSON format. You
 will need to do it on your own, replacing the placeholder <code>birdstrike.json</code> with
 real data.</p>
-<h1 id="-question-1-by-name">(Question 1) by (Name)</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
-<h1 id="-question-2-by-name">(Question 2) by (Name)</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
-<h1 id="-question-3-by-name">(Question 3) by (Name)</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
-<h1 id="-question-4-by-name">(Question 4) by (Name)</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
-<h1 id="-question-5-by-name">(Question 5) by (Name)</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
+<h1 id="-what-phase-of-flight-do-strikes-occour-most-often-by-andrey-shprengel">(What phase of flight do strikes occour most often) by (Andrey Shprengel)</h1>
+<p><pre><code>grps = _.groupBy(data, &quot;When: Phase of flight&quot;)
+grps = _.pick(grps, function(value, key){return key != &quot;&quot;})
+grps =  _.mapValues(grps, function(value, key){
+	return _.size(value)})
+grps = _.pairs(grps)
+grps = _.sortBy(grps, function(n){
+	return n[1]}).reverse()
+return grps</code></pre></p>
+<table>
+
+    <tr>
+        <td>Approach</td>
+        <td>26329</td>
+    </tr>
+
+    <tr>
+        <td>Take-off run</td>
+        <td>11914</td>
+    </tr>
+
+    <tr>
+        <td>Landing Roll</td>
+        <td>11419</td>
+    </tr>
+
+    <tr>
+        <td>Climb</td>
+        <td>10409</td>
+    </tr>
+
+    <tr>
+        <td>Descent</td>
+        <td>2032</td>
+    </tr>
+
+    <tr>
+        <td>En Route</td>
+        <td>1973</td>
+    </tr>
+
+    <tr>
+        <td>Landing</td>
+        <td>315</td>
+    </tr>
+
+    <tr>
+        <td>Taxi</td>
+        <td>215</td>
+    </tr>
+
+    <tr>
+        <td>Parked</td>
+        <td>60</td>
+    </tr>
+
+</table>
+
+<h1 id="what-are-the-top-5-bird-species-that-are-involved-caleb-hsu">What are the top 5 bird species that are involved? (Caleb Hsu)</h1>
+<p><pre><code>var species = _.groupBy(data, &apos;Wildlife: Species&apos;)
+var birds = _.mapValues(species, function(s) {
+    return s.length
+})
+var clean = _.pick(birds, function(value, key) {
+    return key[0] != &quot;U&quot;
+})
+
+return _.sortBy(_.pairs(clean), function(c) {
+    return c[1]
+}).reverse().slice(0, 5)</code></pre></p>
+<table>
+
+    <tr>
+        <td>Mourning dove</td>
+        <td>4365</td>
+    </tr>
+
+    <tr>
+        <td>Gulls</td>
+        <td>2795</td>
+    </tr>
+
+    <tr>
+        <td>American kestrel</td>
+        <td>2651</td>
+    </tr>
+
+    <tr>
+        <td>Killdeer</td>
+        <td>2601</td>
+    </tr>
+
+    <tr>
+        <td>European starling</td>
+        <td>2200</td>
+    </tr>
+
+</table>
+
+<h1 id="-how-many-flights-were-canceled-by-birdstrikes-by-andrew-linenfelser">(How many flights were canceled by birdstrikes?) by (Andrew Linenfelser)</h1>
+<p><pre><code>var group = _.groupBy(data, &apos;Effect: Impact to flight&apos;)
+var types = _.pairs(_.mapValues(group, function(m){
+	return m.length
+}))
+
+var sort = _.sortBy(types, function(f){
+	return f[1]
+})
+var p = _.pullAt(sort, 4, 5)
+console.log(sort)
+
+var total = _.sum(sort, function(t){
+	return t[1]
+	})
+return total</code></pre><div class="console">console&gt; [
+ [
+  &quot;Engine Shut Down&quot;,
+  228
+ ],
+ [
+  &quot;Aborted Take-off&quot;,
+  1300
+ ],
+ [
+  &quot;Other&quot;,
+  1359
+ ],
+ [
+  &quot;Precautionary Landing&quot;,
+  3639
+ ]
+]
+</div>
+There were: 6526 cancellations due to bird strikes</p>
+<h1 id="what-type-of-aircraft-has-the-most-instances-of-damaged-caused-by-bird-strikes-zhili-yang">What type of aircraft has the most instances of damaged caused by bird strikes? (Zhili Yang)</h1>
+<p><pre><code>var filter=_.filter(data, function(air){
+    return air[&apos;Effect: Indicated Damage&apos;] == &quot;Caused damage&quot;
+})
+var groups=_.groupBy(filter, function(air){
+    return air[&apos;Aircraft: Type&apos;]
+})
+var maxGroups=_.mapValues(groups, function(g){
+    return _.size(g)
+})
+var maxType=_.pick(maxGroups, function(g){
+    return g == _.max(maxGroups)
+})
+console.log(maxType);
+return maxType</code></pre><div class="console">console&gt; {
+ &quot;Airplane&quot;: 7196
+}
+</div></p>
+<pre style="font-size:11px;line-height:1;max-height:300px;">{
+ &quot;Airplane&quot;: 7196
+}</pre>
+
+<h1 id="what-states-cost-the-airlines-the-most-money-cost-and-location-by-andrew-berumen">What states cost the airlines the most money? (Cost and location) by Andrew Berumen</h1>
+<p><pre><code>var groups =  _.groupBy(data, &apos;Origin State&apos;)
+var statesCost = _.mapValues(groups, function(d){
+	var cost = _.pluck(d, &apos;Cost: Total $&apos;)
+	return  _.sum(cost)
+})
+
+return statesCost</code></pre></p>
+<pre style="font-size:11px;line-height:1;max-height:300px;">{
+ &quot;New Jersey&quot;: 3654,
+ &quot;N/A&quot;: 35589,
+ &quot;Colorado&quot;: 4621,
+ &quot;Illinois&quot;: 5781,
+ &quot;New York&quot;: 8794,
+ &quot;Florida&quot;: 27674,
+ &quot;Ohio&quot;: 5861,
+ &quot;California&quot;: 21539,
+ &quot;Utah&quot;: 2806,
+ &quot;Missouri&quot;: 3661,
+ &quot;Tennessee&quot;: 6308,
+ &quot;Texas&quot;: 21717,
+ &quot;Rhode Island&quot;: 1497,
+ &quot;Georgia&quot;: 4032,
+ &quot;Maryland&quot;: 3802,
+ &quot;Louisiana&quot;: 3966,
+ &quot;North Carolina&quot;: 4225,
+ &quot;Puerto Rico&quot;: 103,
+ &quot;Connecticut&quot;: 1781,
+ &quot;DC&quot;: 960,
+ &quot;Michigan&quot;: 6280,
+ &quot;Wisconsin&quot;: 3465,
+ &quot;Oregon&quot;: 4543,
+ &quot;Indiana&quot;: 4974,
+ &quot;Nevada&quot;: 1008,
+ &quot;Maine&quot;: 218,
+ &quot;Alabama&quot;: 3826,
+ &quot;Mississippi&quot;: 938,
+ &quot;Hawaii&quot;: 1731,
+ &quot;South Carolina&quot;: 645,
+ &quot;Massachusetts&quot;: 2102,
+ &quot;Alaska&quot;: 2321,
+ &quot;Arizona&quot;: 1722,
+ &quot;New Hampshire&quot;: 1310,
+ &quot;Pennsylvania&quot;: 3097,
+ &quot;Washington&quot;: 2757,
+ &quot;Minnesota&quot;: 2978,
+ &quot;Virginia&quot;: 3576,
+ &quot;Oklahoma&quot;: 4438,
+ &quot;Kentucky&quot;: 4667,
+ &quot;Kansas&quot;: 1199,
+ &quot;Vermont&quot;: 600,
+ &quot;Arkansas&quot;: 2596,
+ &quot;Nebraska&quot;: 5647,
+ &quot;South Dakota&quot;: 2473,
+ &quot;North Dakota&quot;: 1362,
+ &quot;British Columbia&quot;: 83,
+ &quot;Iowa&quot;: 387,
+ &quot;Idaho&quot;: 1042,
+ &quot;West Virginia&quot;: 269,
+ &quot;New Mexico&quot;: 1347,
+ &quot;Ontario&quot;: 874,
+ &quot;Montana&quot;: 771,
+ &quot;Wyoming&quot;: 674,
+ &quot;Virgin Islands&quot;: 100,
+ &quot;Quebec&quot;: 0,
+ &quot;Prince Edward Island&quot;: 700,
+ &quot;Delaware&quot;: 1309,
+ &quot;Newfoundland and Labrador&quot;: 0,
+ &quot;Saskatchewan&quot;: 0,
+ &quot;Alberta&quot;: 0,
+ &quot;Manitoba&quot;: 0,
+ &quot;Nova Scotia&quot;: 0
+}</pre>
 
                     
                     </section>
