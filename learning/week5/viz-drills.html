@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.css">
+        
+    
+        
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
         
     
@@ -41,7 +45,7 @@
         
     
     
-    <link rel="next" href="../../hackathons/index.html" />
+    <link rel="next" href="../../learning/week5/viz-pokemon.html" />
     
     
     <link rel="prev" href="../../learning/week5/viz-steps.html" />
@@ -52,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6.3" data-basepath="../.." data-revision="Sat Sep 26 2015 12:49:00 GMT-0600 (MDT)">
+    <div class="book" data-level="1.6.3" data-basepath="../.." data-revision="Sun Sep 27 2015 23:05:14 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -444,6 +448,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.4" data-path="learning/week5/viz-pokemon.html">
+            
+                
+                    <a href="../../learning/week5/viz-pokemon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.4.</b>
+                        
+                        Viz Pokemon
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -800,7 +819,748 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="more-drills">More Drills</h1>
-<p>TBD</p>
+<p>This and the next page contain several exercises to set you up on a path to
+become proficient in generating SVGs for visualizing data. For each exercise,
+a &quot;desired viz&quot; is given. You need to modify the <em>code</em> block and the <em>template</em> block
+to come up with your own solution to create a visualization as close to the
+desired visualization as possible. The SVG code of the desired viz is shown to give you a target
+as to what set of SVG tags and attributes you need to generate in order to render
+the desired visualization. You can also see the SVG code your code generates.
+You want to get your version of the SVG code as close as possible to the target SVG code.</p>
+<p>By close, you don&apos;t need to get to the exact precision. For instance, if
+you see <code>x=&apos;143.31413124123&apos;</code> in a SVG tag in the target code, it is good enough
+for your code to somehow get <code>x</code> to that range (e.g., 142, 143, 144)
+to produce a visualization that look almost identical to human eyes.</p>
+<p>Note that the solution template code is slightly modified from the previous
+page in order to put all Javascript code in the same code block.</p>
+<p><a name="top"></a></p>
+<h1 id="exercises">Exercises</h1>
+<div id="autonav"></div>
+
+<p></p><h2> <span class="text">Color the bar corresponding to USA</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><rect x="0" y="0" width="20" height="400" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="0" width="20" height="363.7298169958114" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="0" width="20" height="92.57762865891063" style="fill:blue;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="0" width="20" height="72.5542186586242" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><rect x="0" y="0" width="20" height="399.96703921157837" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="0" width="20" height="363.6998449419598" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="0" width="20" height="92.57000007983363" style="fill:blue;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="0" width="20" height="72.54824004799843" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;400&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;363.7298169958114&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57762865891063&quot;
+     style=&quot;fill:blue;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;72.5542186586242&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;399.96703921157837&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;363.6998449419598&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57000007983363&quot;
+     style=&quot;fill:blue;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;72.54824004799843&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return i * 20
+}
+
+function computeHeight(d, i) {
+    return d.pop/3484746.74
+}
+
+function computeColor(d, i) {
+if(d.name == &apos;USA&apos;)
+	{return &apos;blue&apos;}
+    return &apos;red&apos; // TODO
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                height: computeHeight(d, i),
+                color: computeColor(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;height&quot;:399.96703921157837,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:20,&quot;height&quot;:363.6998449419598,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:40,&quot;height&quot;:92.57000007983363,&quot;color&quot;:&quot;blue&quot;},{&quot;x&quot;:60,&quot;height&quot;:72.54824004799843,&quot;color&quot;:&quot;red&quot;}]</span></div></div></div><p></p>
+<p></p><h2> <span class="text">Align the bars at the bottom</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><rect x="0" y="0" width="20" height="400" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="36.270183004188596" width="20" height="363.7298169958114" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="307.4223713410894" width="20" height="92.57762865891063" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="327.4457813413758" width="20" height="72.5542186586242" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><rect x="0" y="0.03296078842163297" width="20" height="399.96703921157837" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="36.30015505804022" width="20" height="363.6998449419598" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="307.4299999201664" width="20" height="92.57000007983363" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="327.45175995200157" width="20" height="72.54824004799843" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;400&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;36.270183004188596&quot;
+     width=&quot;20&quot;
+     height=&quot;363.7298169958114&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;307.4223713410894&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57762865891063&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;327.4457813413758&quot;
+     width=&quot;20&quot;
+     height=&quot;72.5542186586242&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0.03296078842163297&quot;
+     width=&quot;20&quot;
+     height=&quot;399.96703921157837&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;36.30015505804022&quot;
+     width=&quot;20&quot;
+     height=&quot;363.6998449419598&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;307.4299999201664&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57000007983363&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;327.45175995200157&quot;
+     width=&quot;20&quot;
+     height=&quot;72.54824004799843&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;${d.y}&quot;
+     width=&quot;20&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return i * 20
+}
+
+function computeHeight(d, i) {
+    return d.pop/3484746.74
+}
+
+function computeY(d, i) {
+    return 400 -d.pop/3484746.74
+}
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                color: computeColor(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;y&quot;:0.03296078842163297,&quot;height&quot;:399.96703921157837,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:20,&quot;y&quot;:36.30015505804022,&quot;height&quot;:363.6998449419598,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:40,&quot;y&quot;:307.4299999201664,&quot;height&quot;:92.57000007983363,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:60,&quot;y&quot;:327.45175995200157,&quot;height&quot;:72.54824004799843,&quot;color&quot;:&quot;red&quot;}]</span></div></div></div><p></p>
+<p></p><h2> <span class="text">Add some margins between every two bars</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><rect x="0" y="0" width="20" height="400" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="30" y="36.270183004188596" width="20" height="363.7298169958114" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="307.4223713410894" width="20" height="92.57762865891063" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="90" y="327.4457813413758" width="20" height="72.5542186586242" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><rect x="0" y="0.03296078842163297" width="20" height="399.96703921157837" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="30" y="36.30015505804022" width="20" height="363.6998449419598" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="307.4299999201664" width="20" height="92.57000007983363" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="90" y="327.45175995200157" width="20" height="72.54824004799843" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;400&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;30&quot;
+      y=&quot;36.270183004188596&quot;
+     width=&quot;20&quot;
+     height=&quot;363.7298169958114&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;307.4223713410894&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57762865891063&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;90&quot;
+      y=&quot;327.4457813413758&quot;
+     width=&quot;20&quot;
+     height=&quot;72.5542186586242&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0.03296078842163297&quot;
+     width=&quot;20&quot;
+     height=&quot;399.96703921157837&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;30&quot;
+      y=&quot;36.30015505804022&quot;
+     width=&quot;20&quot;
+     height=&quot;363.6998449419598&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;307.4299999201664&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57000007983363&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;90&quot;
+      y=&quot;327.45175995200157&quot;
+     width=&quot;20&quot;
+     height=&quot;72.54824004799843&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;${d.y}&quot;
+     width=&quot;20&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return i * 20 + (i * 20)/2
+}
+
+function computeHeight(d, i) {
+    return d.pop/3484746.74
+}
+
+function computeY(d, i) {
+    return 400 -d.pop/3484746.74
+}
+
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                color: computeColor(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;y&quot;:0.03296078842163297,&quot;height&quot;:399.96703921157837,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:30,&quot;y&quot;:36.30015505804022,&quot;height&quot;:363.6998449419598,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:60,&quot;y&quot;:307.4299999201664,&quot;height&quot;:92.57000007983363,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:90,&quot;y&quot;:327.45175995200157,&quot;height&quot;:72.54824004799843,&quot;color&quot;:&quot;red&quot;}]</span></div></div></div><p></p>
+<p></p><h2> <span class="text">Reverse the order of the bars</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><rect x="0" y="327.4457813413758" width="20" height="72.5542186586242" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="307.4223713410894" width="20" height="92.57762865891063" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="36.270183004188596" width="20" height="363.7298169958114" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="60" y="0" width="20" height="400" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><rect x="60" y="0.03296078842163297" width="20" height="399.96703921157837" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="40" y="36.30015505804022" width="20" height="363.6998449419598" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="20" y="307.4299999201664" width="20" height="92.57000007983363" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="327.45175995200157" width="20" height="72.54824004799843" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;327.4457813413758&quot;
+     width=&quot;20&quot;
+     height=&quot;72.5542186586242&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;307.4223713410894&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57762865891063&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;36.270183004188596&quot;
+     width=&quot;20&quot;
+     height=&quot;363.7298169958114&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;0&quot;
+     width=&quot;20&quot;
+     height=&quot;400&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;rect x=&quot;60&quot;
+      y=&quot;0.03296078842163297&quot;
+     width=&quot;20&quot;
+     height=&quot;399.96703921157837&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;40&quot;
+      y=&quot;36.30015505804022&quot;
+     width=&quot;20&quot;
+     height=&quot;363.6998449419598&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;20&quot;
+      y=&quot;307.4299999201664&quot;
+     width=&quot;20&quot;
+     height=&quot;92.57000007983363&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;327.45175995200157&quot;
+     width=&quot;20&quot;
+     height=&quot;72.54824004799843&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;${d.y}&quot;
+     width=&quot;20&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return 60 - i * 20
+}
+
+function computeHeight(d, i) {
+    return d.pop/3484746.74
+}
+
+function computeY(d, i) {
+    return 400 -d.pop/3484746.74
+}
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                color: computeColor(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:60,&quot;y&quot;:0.03296078842163297,&quot;height&quot;:399.96703921157837,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:40,&quot;y&quot;:36.30015505804022,&quot;height&quot;:363.6998449419598,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:20,&quot;y&quot;:307.4299999201664,&quot;height&quot;:92.57000007983363,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:0,&quot;y&quot;:327.45175995200157,&quot;height&quot;:72.54824004799843,&quot;color&quot;:&quot;red&quot;}]</span></div></div></div><p></p>
+<p></p><h2> <span class="text">Display bars horizontally</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><rect x="0" y="0" width="300" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="20" width="272.79736274685854" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="40" width="69.43322149418297" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="60" width="54.415663993968145" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><rect x="0" y="0" width="300" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="20" width="272.79736274685854" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="40" width="69.43322149418297" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<rect x="0" y="60" width="54.415663993968145" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;300&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;20&quot;
+     width=&quot;272.79736274685854&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;40&quot;
+     width=&quot;69.43322149418297&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;60&quot;
+     width=&quot;54.415663993968145&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+     width=&quot;300&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;20&quot;
+     width=&quot;272.79736274685854&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;40&quot;
+     width=&quot;69.43322149418297&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;rect x=&quot;0&quot;
+      y=&quot;60&quot;
+     width=&quot;54.415663993968145&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;${d.y}&quot;
+     width=&quot;${d.width}&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return 0
+}
+
+function computeHeight(d, i) {
+    return 20
+}
+
+function computeWidth(d, i) {
+    return d.pop/4645946.12
+}
+
+function computeY(d, i) {
+    return 20 * i
+}
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                width: computeWidth(d, i),
+                color: computeColor(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;y&quot;:0,&quot;height&quot;:20,&quot;width&quot;:300,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:0,&quot;y&quot;:20,&quot;height&quot;:20,&quot;width&quot;:272.79736274685854,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:0,&quot;y&quot;:40,&quot;height&quot;:20,&quot;width&quot;:69.43322149418297,&quot;color&quot;:&quot;red&quot;},{&quot;x&quot;:0,&quot;y&quot;:60,&quot;height&quot;:20,&quot;width&quot;:54.415663993968145,&quot;color&quot;:&quot;red&quot;}]</span></div></div></div><p></p>
+<p></p><h2> <span class="text">Display a number next to each bar</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="section-title">Data        <span style="font-size:10px;line-height:11px;" class="inspect"><span style="visibility:hidden">[{&quot;name&quot;:&quot;China&quot;,&quot;pop&quot;:1393783836},{&quot;name&quot;:&quot;India&quot;,&quot;pop&quot;:1267401849},{&quot;name&quot;:&quot;USA&quot;,&quot;pop&quot;:322583006},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;pop&quot;:252812243}]</span></span></div><div class="output"><div class="left"><div class="section-title">Desired Viz<svg width="100%" height="400"><g transform="translate(0 0)">
+<rect width="300" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="330" y="10">1393783836</text>
+</g>
+<g transform="translate(0 20)">
+<rect width="272.79736274685854" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="330" y="10">1267401849</text>
+</g>
+<g transform="translate(0 40)">
+<rect width="69.43322149418297" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="330" y="10">322583006</text>
+</g>
+<g transform="translate(0 60)">
+<rect width="54.415663993968145" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="330" y="10">252812243</text>
+</g></svg></div></div><div class="right"><div class="section-title">Actual Viz<svg width="100%" height="400"><g transform="translate(0 0)">
+<rect width="100" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="100" y="10">label</text>
+</g>
+<g transform="translate(0 20)">
+<rect width="120" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="100" y="10">label</text>
+</g>
+<g transform="translate(0 40)">
+<rect width="140" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="100" y="10">label</text>
+</g>
+<g transform="translate(0 60)">
+<rect width="160" height="20" style="fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)"/>
+<text x="100" y="10">label</text>
+</g></svg></div></div></div><div class="output"><div class="left">    <div class="section-title">       <pre><code>&lt;g transform=&quot;translate(0 0)&quot;&gt;
+&lt;rect width=&quot;300&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;330&quot; y=&quot;10&quot;&gt;1393783836&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 20)&quot;&gt;
+&lt;rect width=&quot;272.79736274685854&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;330&quot; y=&quot;10&quot;&gt;1267401849&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 40)&quot;&gt;
+&lt;rect width=&quot;69.43322149418297&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;330&quot; y=&quot;10&quot;&gt;322583006&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 60)&quot;&gt;
+&lt;rect width=&quot;54.415663993968145&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;330&quot; y=&quot;10&quot;&gt;252812243&lt;/text&gt;
+&lt;/g&gt;</code></pre></div></div><div class="right">  <div class="section-title">                <pre><code>&lt;g transform=&quot;translate(0 0)&quot;&gt;
+&lt;rect width=&quot;100&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;100&quot; y=&quot;10&quot;&gt;label&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 20)&quot;&gt;
+&lt;rect width=&quot;120&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;100&quot; y=&quot;10&quot;&gt;label&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 40)&quot;&gt;
+&lt;rect width=&quot;140&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;100&quot; y=&quot;10&quot;&gt;label&lt;/text&gt;
+&lt;/g&gt;
+&lt;g transform=&quot;translate(0 60)&quot;&gt;
+&lt;rect width=&quot;160&quot;
+     height=&quot;20&quot;
+     style=&quot;fill:red;
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;100&quot; y=&quot;10&quot;&gt;label&lt;/text&gt;
+&lt;/g&gt;</code></pre></div></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;g transform=&quot;translate(${d.x} ${d.y})&quot;&gt;
+&lt;rect width=&quot;${d.width}&quot;
+     height=&quot;${d.height}&quot;
+     style=&quot;fill:${d.color};
+            stroke-width:3;
+            stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text x=&quot;100&quot; y=&quot;10&quot;&gt;${d.label}&lt;/text&gt;
+&lt;/g&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>function computeX(d, i) {
+    return 0
+}
+
+function computeHeight(d, i) {
+    return 20
+}
+
+function computeWidth(d, i) {
+    return 20 * i + 100
+}
+
+function computeY(d, i) {
+    return 20 * i
+}
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+function computeLabel(d, i) {
+    return &apos;label&apos;
+}
+
+var viz = _.map(data, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                width: computeWidth(d, i),
+                color: computeColor(d, i),
+                label: computeLabel(d, i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;y&quot;:0,&quot;height&quot;:20,&quot;width&quot;:100,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;label&quot;},{&quot;x&quot;:0,&quot;y&quot;:20,&quot;height&quot;:20,&quot;width&quot;:120,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;label&quot;},{&quot;x&quot;:0,&quot;y&quot;:40,&quot;height&quot;:20,&quot;width&quot;:140,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;label&quot;},{&quot;x&quot;:0,&quot;y&quot;:60,&quot;height&quot;:20,&quot;width&quot;:160,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;label&quot;}]</span></div></div></div><p></p>
 
                     
                     </section>
@@ -814,7 +1574,7 @@
         <a href="../../learning/week5/viz-steps.html" class="navigation navigation-prev " aria-label="Previous page: Viz Intro"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/index.html" class="navigation navigation-next " aria-label="Next page: Hackathons"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week5/viz-pokemon.html" class="navigation navigation-next " aria-label="Next page: Viz Pokemon"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
@@ -831,11 +1591,11 @@
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
 <script>
