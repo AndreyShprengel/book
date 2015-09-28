@@ -2,7 +2,7 @@
 
 {% title %}
 
-Add some margins between every two bars
+Display a number next to each bar
 
 {% data %}
 
@@ -14,20 +14,27 @@ Add some margins between every two bars
 {% solution %}
 
 function computeX(d, i) {
-    return i * 20 + (i * 20)/2
+    return 0
 }
 
 function computeHeight(d, i) {
-    return d.pop/3484746.74
+    return 20
+}
+
+function computeWidth(d, i) {
+    return 20 * i + 100
 }
 
 function computeY(d, i) {
-    return 400 -d.pop/3484746.74
+    return 20 * i
 }
-
 
 function computeColor(d, i) {
     return 'red'
+}
+
+function computeLabel(d, i) {
+    return 'label'
 }
 
 var viz = _.map(data, function(d, i){
@@ -35,7 +42,9 @@ var viz = _.map(data, function(d, i){
                 x: computeX(d, i),
                 y: computeY(d, i),
                 height: computeHeight(d, i),
-                color: computeColor(d, i)
+                width: computeWidth(d, i),
+                color: computeColor(d, i),
+                label: computeLabel(d, i)
             }
          })
 console.log(viz)
@@ -48,43 +57,48 @@ return result.join('\n')
 
 {% template %}
 
-<rect x="${d.x}"
-      y="${d.y}"
-     width="20"
+<g transform="translate(${d.x} ${d.y})">
+<rect width="${d.width}"
      height="${d.height}"
      style="fill:${d.color};
             stroke-width:3;
             stroke:rgb(0,0,0)" />
+<text x="100" y="10">${d.label}</text>
+</g>
 
 {% output %}
 
-<rect x="0"
-      y="0"
-     width="20"
-     height="400"
+<g transform="translate(0 0)">
+<rect width="300"
+     height="20"
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<rect x="30"
-      y="36.270183004188596"
-     width="20"
-     height="363.7298169958114"
+<text x="330" y="10">1393783836</text>
+</g>
+<g transform="translate(0 20)">
+<rect width="272.79736274685854"
+     height="20"
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<rect x="60"
-      y="307.4223713410894"
-     width="20"
-     height="92.57762865891063"
+<text x="330" y="10">1267401849</text>
+</g>
+<g transform="translate(0 40)">
+<rect width="69.43322149418297"
+     height="20"
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<rect x="90"
-      y="327.4457813413758"
-     width="20"
-     height="72.5542186586242"
+<text x="330" y="10">322583006</text>
+</g>
+<g transform="translate(0 60)">
+<rect width="54.415663993968145"
+     height="20"
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
+<text x="330" y="10">252812243</text>
+</g>
 
 {% endvizexercise %}

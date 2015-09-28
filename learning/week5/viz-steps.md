@@ -116,7 +116,8 @@ function computeX(d, i) {
 
 function computeHeight(d, i){
     // TODO: fix this to return the correct height
-    return 10 + i * 50
+    console.log(d)
+    return d.pop/1000000
 }
 
 data.viz = _.map(data.countries, function(d, i){
@@ -182,7 +183,12 @@ function computeX(d, i) {
 
 function computeHeight(d, i){
     // TODO: fix this to return the correct height
-    return 10 + i * 50
+     return d.pop/1000000
+}
+
+function computeWidth(d, i){
+    // TODO: fix this to return the correct height
+     return d.pop/100000000
 }
 
 // TODO: add a new mapper function for width
@@ -191,23 +197,24 @@ data.viz = _.map(data.countries, function(d, i){
         // TODO: add a new attribute to each viz object
         return {
             x: computeX(d, i),
-            height: computeHeight(d, i)
+            height: computeHeight(d, i),
+            width : computeWidth(d, i)
         }    
     })
 
 {% endlodash %}
 
 ### Step 3: Template
-
-(TODO: add template variables for width and height)
 {% template name='foo' %}
 
 <rect x="${d.x}"
-     width="20"
-     height="20"
+     width="${d.width}"
+     height="${d.height}"
      style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
 
 {% endtemplate %}
+
+
 
 ### Step 4: Populate
 
