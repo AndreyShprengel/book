@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Lodash Drills | book</title>
+        <title>Warmup | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -45,10 +45,10 @@
         
     
     
-    <link rel="next" href="../../learning/week3/lodash-groupby.html" />
+    <link rel="next" href="../../hackathons/open/report.html" />
     
     
-    <link rel="prev" href="../../learning/week3/github-api.html" />
+    <link rel="prev" href="../../hackathons/open/index.html" />
     
 
         <!-- head:end -->
@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4.2" data-basepath="../.." data-revision="Wed Sep 30 2015 16:37:03 GMT-0600 (MDT)">
+    <div class="book" data-level="2.5.1" data-basepath="../.." data-revision="Wed Sep 30 2015 16:37:03 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -301,7 +301,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="learning/week3/lodash-drills.html">
+        <li class="chapter " data-level="1.4.2" data-path="learning/week3/lodash-drills.html">
             
                 
                     <a href="../../learning/week3/lodash-drills.html">
@@ -724,7 +724,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="hackathons/open/warmup.html">
+        <li class="chapter active" data-level="2.5.1" data-path="hackathons/open/warmup.html">
             
                 
                     <a href="../../hackathons/open/warmup.html">
@@ -869,156 +869,250 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="lodash-drills">Lodash Drills</h1>
-<p>Complete the following Lodash exercises. The goal is to become really good at
-functional programming paradigm (e.g., <code>_.map</code>, <code>_.filter</code>, <code>_.all</code>, <code>_.any</code> ...etc) and
-a number of really useful Lodash methods (e.g., <code>_.find</code>, <code>_.pluck</code> ... etc).</p>
-<ul>
-<li>enter your solution in the <code>solution</code> block</li>
-<li>utilize lodash functions as much as possible</li>
-<li>no <code>for/while</code> loop is allowed</li>
-</ul>
-<p>Familiarity with programming in this way will not only make you a super productive
-programmer but also will pave the way for you to learn MapReduce and MongoDB.</p>
-<h1 id="examples">Examples</h1>
-<p></p><h2>How many people?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>4</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>4</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> data.length</pre></div><p></p>
-<p></p><h2>What are the names?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Joe&quot;,
-  &quot;Ben&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Joe&quot;,
-  &quot;Ben&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map(data, <span class="keyword">function</span>(d){
-    <span class="keyword">return</span> d.name
-})</pre></div><p></p>
-<h1 id="exercises">Exercises</h1>
-<p></p><h2>What names begin with the letter J?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;John&quot;,
-  &quot;Joe&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;John&quot;,
-  &quot;Joe&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map(_.filter(data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> n.name.charAt(<span class="number">0</span>) == <span class="string">&apos;J&apos;</span>}), <span class="keyword">function</span>(d){
-    <span class="keyword">return</span> d.name
-})</pre></div><p></p>
-<p></p><h2>How many Johns?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;John&apos;}, {name: &apos;John&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>3</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>3</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.size(_.filter( data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> n.name == <span class="string">&apos;John&apos;</span>}))</pre></div><p></p>
-<p></p><h2>What are all the first names?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Kay&apos;}, {name: &apos;Peter Pan&apos;}, {name: &apos;Ben Franklin&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Peter&quot;,
-  &quot;Ben&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Peter&quot;,
-  &quot;Ben&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map(data,<span class="keyword">function</span>(obj) {
-                    <span class="keyword">return</span> obj[<span class="string">&quot;name&quot;</span>].split(<span class="string">&quot; &quot;</span>)[<span class="number">0</span>];
-                })</pre></div><p></p>
-<p></p><h2>What are the first names of Smith?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Smith&apos;}, {name: &apos;Peter Pan&apos;}, {name: &apos;Ben Smith&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Ben&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;John&quot;,
-  &quot;Mary&quot;,
-  &quot;Ben&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map(_.filter(data, <span class="keyword">function</span>(obj) {
-                    <span class="keyword">return</span> obj.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">1</span>] == <span class="string">&apos;Smith&apos;</span>
-                } ),<span class="keyword">function</span>(obj) {
-                    <span class="keyword">return</span> obj.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">0</span>];
-                })</pre></div><p></p>
-<p></p><h2>Change the format to lastname, firstname</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Kay&apos;}, {name: &apos;Peter Pan&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  {
-    &quot;name&quot;: &quot;Smith, John&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Kay, Mary&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Pan, Peter&quot;
-  }
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  {
-    &quot;name&quot;: &quot;Smith, John&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Kay, Mary&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Pan, Peter&quot;
-  }
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map( data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> {<span class="string">&quot;name&quot;</span> : n.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">1</span>] + <span class="string">&quot;, &quot;</span>  + n.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">0</span>] };})</pre></div><p></p>
-<p></p><h2>How many women?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>1</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>1</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.size(_.filter( data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.gender == <span class="string">&apos;f&apos;</span>}))</pre></div><p></p>
-<p></p><h2>How many men whose last name is Smith?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>2</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>2</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.size(_.filter( data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.gender == <span class="string">&apos;m&apos;</span> &amp;&amp; n.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">1</span>] == <span class="string">&apos;Smith&apos;</span> }))</pre></div><p></p>
-<p></p><h2></h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>true</pre></div></div></div><div class="section-title">Solution</div><pre>men =  _.size(_.filter( data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.gender == <span class="string">&apos;m&apos;</span>}))
-women =  _.size(_.filter( data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.gender == <span class="string">&apos;f&apos;</span>}))
+                        <h1 id="warmup">Warmup</h1>
+<p>Complete this warmup exercise to get an idea how to put all the different pieces
+together to generate an end-to-end data analysis viz report.</p>
+<p><a name="top"></a></p>
+<div id="autonav"></div>
 
-<span class="keyword">return</span> men &gt; women</pre></div><p></p>
-<p></p><h2>What is Peter Pan&apos;s gender?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>&quot;m&quot;</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;m&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.find(data, {name: <span class="string">&apos;Peter Pan&apos;</span>}).gender</pre></div><p></p>
-<p></p><h2>What is the oldest age?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>54</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>54</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.last(_.sortBy(data, <span class="string">&apos;age&apos;</span>)).age</pre></div><p></p>
-<p></p><h2>Is it true everyone is younger than 60?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>true</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// use _.all</span>
-<span class="keyword">return</span> _.all(data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.age &lt; <span class="number">60</span> })</pre></div><p></p>
-<p></p><h2>Is it true someone is not an adult (younger than 18)?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>true</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// use _.some</span>
-<span class="keyword">return</span> _.some(data, <span class="keyword">function</span>(n){ <span class="keyword">return</span> n.age &lt; <span class="number">18</span> })</pre></div><p></p>
-<p></p><h2>How many people whose favorites include food?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
- {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
- {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
- {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>3</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>3</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.size(_.filter(data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> _.contains(n.favorites, <span class="string">&apos;food&apos;</span>) } ))</pre></div><p></p>
-<p></p><h2>Who are over 40 and love travel?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
- {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
- {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
- {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
- {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;Mary Smith&quot;,
-  &quot;Joe Johnson&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;Mary Smith&quot;,
-  &quot;Joe Johnson&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.pluck(_.filter(data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> _.contains(n.favorites, <span class="string">&apos;travel&apos;</span>) &amp;&amp; n.age &gt; <span class="number">40</span> }), <span class="string">&apos;name&apos;</span>)</pre></div><p></p>
-<p></p><h2>Who is the oldest person loving food?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
- {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
- {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
- {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
- {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>&quot;John Smith&quot;</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;John Smith&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.last(_.sortBy( _.filter(data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> _.contains(n.favorites, <span class="string">&apos;food&apos;</span>) }), <span class="string">&apos;age&apos;</span>)).name</pre></div><p></p>
-<p></p><h2>What are all the unique favorites?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
- {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
- {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
- {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
- {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;food&quot;,
-  &quot;movies&quot;,
-  &quot;travel&quot;,
-  &quot;minecraft&quot;,
-  &quot;pokemo&quot;,
-  &quot;craft&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;food&quot;,
-  &quot;movies&quot;,
-  &quot;travel&quot;,
-  &quot;minecraft&quot;,
-  &quot;pokemo&quot;,
-  &quot;craft&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// hint: use _.pluck, _.uniq, _.flatten in some order</span>
+<p></p>
+<p></p><h2> <span class="text">What is the distribution of courses across colleges?</span><a href="#top" style="font-size: 14px; float: right;">[top]</a></h2><div class="lodashexercise">   <a name="foo">   </a><div class="output">       <div class="section-title">Viz<svg width="100%" height="400"><rect x="0" y="0" height="323.7" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(0 340)">
+        AS
+    </text>
+<rect x="30" y="285.9" height="37.8" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(30 340)">
+        BU
+    </text>
+<rect x="60" y="309.8" height="13.9" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(60 340)">
+        EB
+    </text>
+<rect x="90" y="266.4" height="57.3" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(90 340)">
+        EN
+    </text>
+<rect x="120" y="318.59999999999997" height="5.1" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(120 340)">
+        GR
+    </text>
+<rect x="150" y="314.09999999999997" height="9.6" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(150 340)">
+        JR
+    </text>
+<rect x="180" y="306.09999999999997" height="17.6" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(180 340)">
+        LW
+    </text>
+<rect x="210" y="299.59999999999997" height="24.1" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(210 340)">
+        MB
+    </text>
+<rect x="240" y="320.7" height="3" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(240 340)">
+        XX
+    </text>
+<rect x="270" y="321.8" height="1.9" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(270 340)">
+        undefined
+    </text>
+<rect x="300" y="317.7" height="6" width="20" style="fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)"/>
+<text transform="translate(300 340)">
+        AP
+    </text></svg></div></div><div class="output"><div class="section-title">                <pre><code>&lt;rect x=&quot;0&quot;
+      y=&quot;0&quot;
+      height=&quot;323.7&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(0 340)&quot;&gt;
+        AS
+    &lt;/text&gt;
+&lt;rect x=&quot;30&quot;
+      y=&quot;285.9&quot;
+      height=&quot;37.8&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(30 340)&quot;&gt;
+        BU
+    &lt;/text&gt;
+&lt;rect x=&quot;60&quot;
+      y=&quot;309.8&quot;
+      height=&quot;13.9&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(60 340)&quot;&gt;
+        EB
+    &lt;/text&gt;
+&lt;rect x=&quot;90&quot;
+      y=&quot;266.4&quot;
+      height=&quot;57.3&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(90 340)&quot;&gt;
+        EN
+    &lt;/text&gt;
+&lt;rect x=&quot;120&quot;
+      y=&quot;318.59999999999997&quot;
+      height=&quot;5.1&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(120 340)&quot;&gt;
+        GR
+    &lt;/text&gt;
+&lt;rect x=&quot;150&quot;
+      y=&quot;314.09999999999997&quot;
+      height=&quot;9.6&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(150 340)&quot;&gt;
+        JR
+    &lt;/text&gt;
+&lt;rect x=&quot;180&quot;
+      y=&quot;306.09999999999997&quot;
+      height=&quot;17.6&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(180 340)&quot;&gt;
+        LW
+    &lt;/text&gt;
+&lt;rect x=&quot;210&quot;
+      y=&quot;299.59999999999997&quot;
+      height=&quot;24.1&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(210 340)&quot;&gt;
+        MB
+    &lt;/text&gt;
+&lt;rect x=&quot;240&quot;
+      y=&quot;320.7&quot;
+      height=&quot;3&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(240 340)&quot;&gt;
+        XX
+    &lt;/text&gt;
+&lt;rect x=&quot;270&quot;
+      y=&quot;321.8&quot;
+      height=&quot;1.9&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(270 340)&quot;&gt;
+        undefined
+    &lt;/text&gt;
+&lt;rect x=&quot;300&quot;
+      y=&quot;317.7&quot;
+      height=&quot;6&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:red;
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(300 340)&quot;&gt;
+        AP
+    &lt;/text&gt;</code></pre></div></div><div class="section-title">Solution: SVG Template<pre><code>&lt;rect x=&quot;${d.x}&quot;
+      y=&quot;${d.y}&quot;
+      height=&quot;${d.height}&quot;
+      width=&quot;20&quot;
+      style=&quot;fill:${d.color};
+             stroke-width:3;
+             stroke:rgb(0,0,0)&quot; /&gt;
+&lt;text transform=&quot;translate(${d.x} 340)&quot;&gt;
+        ${d.label}
+    &lt;/text&gt;</code></pre></div><div class="section-title">Solution: Javascript</div><pre><code>var groups = _.groupBy(data, function(d){
+    return d[&apos;CrsPBAColl&apos;]
+})
 
-<span class="keyword">return</span> _.uniq(_.flatten(_.pluck(data, <span class="string">&quot;favorites&quot;</span>)))</pre></div><p></p>
-<p></p><h2>What are all the unique last names?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
- {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
- {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
- {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
- {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
-  &quot;Smith&quot;,
-  &quot;Pan&quot;,
-  &quot;Johnson&quot;
-]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
-  &quot;Smith&quot;,
-  &quot;Pan&quot;,
-  &quot;Johnson&quot;
-]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.uniq(_.map(data, <span class="keyword">function</span>(n) { <span class="keyword">return</span> n.name.split(<span class="string">&quot; &quot;</span>)[<span class="number">1</span>]}))</pre></div><p></p>
+// TODO: add real code to convert groups (which is an object) into an array like below
+// This array should have a lot more elements.
+var counts = _.mapValues(groups, function(n){return _.size(n)})
+var counts = _.map(counts, function(value,key){return {&quot;name&quot;: key , &quot;value&quot;: value}})
+
+console.log(counts)
+
+// TODO: modify the code below to produce a nice vertical bar charts
+
+function computeLabel(d, i){
+	return d.name
+}
+
+function computeX(d, i) {
+    return i * 20 + (i * 20)/2
+}
+
+function computeHeight(d, i) {
+	return d.value/10
+}
+
+function computeWidth(d, i) {
+    return 20 * i + 100
+}
+
+function computeY(d, i) {
+    return 323.7 - d.value/10
+}
+
+function computeColor(d, i) {
+    return &apos;red&apos;
+}
+
+var viz = _.map(counts, function(d, i){
+            return {
+                x: computeX(d, i),
+                y: computeY(d, i),
+                height: computeHeight(d, i),
+                width: computeWidth(d, i),
+                color: computeColor(d, i),
+                label: computeLabel(d,i)
+            }
+         })
+console.log(viz)
+
+var result = _.map(viz, function(d){
+         // invoke the compiled template function on each viz data
+         return template({d: d})
+     })
+return result.join(&apos;\n&apos;)</code></pre><div class="section-title">Console<div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;name&quot;:&quot;AS&quot;,&quot;value&quot;:3237},{&quot;name&quot;:&quot;BU&quot;,&quot;value&quot;:378},{&quot;name&quot;:&quot;EB&quot;,&quot;value&quot;:139},{&quot;name&quot;:&quot;EN&quot;,&quot;value&quot;:573},{&quot;name&quot;:&quot;GR&quot;,&quot;value&quot;:51},{&quot;name&quot;:&quot;JR&quot;,&quot;value&quot;:96},{&quot;name&quot;:&quot;LW&quot;,&quot;value&quot;:176},{&quot;name&quot;:&quot;MB&quot;,&quot;value&quot;:241},{&quot;name&quot;:&quot;XX&quot;,&quot;value&quot;:30},{&quot;name&quot;:&quot;undefined&quot;,&quot;value&quot;:19},{&quot;name&quot;:&quot;AP&quot;,&quot;value&quot;:60}]</span></div><div style="border:1px solid #eee; margin-bottom: 5px;"><span style="font-size:10px;line-height:11px;" class="inspect">       [{&quot;x&quot;:0,&quot;y&quot;:0,&quot;height&quot;:323.7,&quot;width&quot;:100,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;AS&quot;},{&quot;x&quot;:30,&quot;y&quot;:285.9,&quot;height&quot;:37.8,&quot;width&quot;:120,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;BU&quot;},{&quot;x&quot;:60,&quot;y&quot;:309.8,&quot;height&quot;:13.9,&quot;width&quot;:140,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;EB&quot;},{&quot;x&quot;:90,&quot;y&quot;:266.4,&quot;height&quot;:57.3,&quot;width&quot;:160,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;EN&quot;},{&quot;x&quot;:120,&quot;y&quot;:318.59999999999997,&quot;height&quot;:5.1,&quot;width&quot;:180,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;GR&quot;},{&quot;x&quot;:150,&quot;y&quot;:314.09999999999997,&quot;height&quot;:9.6,&quot;width&quot;:200,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;JR&quot;},{&quot;x&quot;:180,&quot;y&quot;:306.09999999999997,&quot;height&quot;:17.6,&quot;width&quot;:220,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;LW&quot;},{&quot;x&quot;:210,&quot;y&quot;:299.59999999999997,&quot;height&quot;:24.1,&quot;width&quot;:240,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;MB&quot;},{&quot;x&quot;:240,&quot;y&quot;:320.7,&quot;height&quot;:3,&quot;width&quot;:260,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;XX&quot;},{&quot;x&quot;:270,&quot;y&quot;:321.8,&quot;height&quot;:1.9,&quot;width&quot;:280,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;undefined&quot;},{&quot;x&quot;:300,&quot;y&quot;:317.7,&quot;height&quot;:6,&quot;width&quot;:300,&quot;color&quot;:&quot;red&quot;,&quot;label&quot;:&quot;AP&quot;}]</span></div></div></div><p></p>
 
                     
                     </section>
@@ -1029,10 +1123,10 @@ women =  _.size(_.filter( data, <span class="keyword">function</span>(n){ <span 
         </div>
 
         
-        <a href="../../learning/week3/github-api.html" class="navigation navigation-prev " aria-label="Previous page: Github API"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/open/index.html" class="navigation navigation-prev " aria-label="Previous page: Open"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../learning/week3/lodash-groupby.html" class="navigation navigation-next " aria-label="Next page: Lodash GroupBy"><i class="fa fa-angle-right"></i></a>
+        <a href="../../hackathons/open/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

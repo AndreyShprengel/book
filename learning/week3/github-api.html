@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4.1" data-basepath="../.." data-revision="Sun Sep 27 2015 23:05:14 GMT-0600 (MDT)">
+    <div class="book" data-level="1.4.1" data-basepath="../.." data-revision="Wed Sep 30 2015 16:37:03 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -708,6 +708,57 @@
             
         </li>
     
+        <li class="chapter " data-level="2.5" data-path="hackathons/open/index.html">
+            
+                
+                    <a href="../../hackathons/open/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Open
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="hackathons/open/warmup.html">
+            
+                
+                    <a href="../../hackathons/open/warmup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        Warmup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="hackathons/open/report.html">
+            
+                
+                    <a href="../../hackathons/open/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -987,10 +1038,13 @@ you want.</p>
 <h3 id="how-many-issues-have-been-created-to-date-in-our-class-s-forum-repository">How many issues have been created to date in our class&apos;s forum repository?</h3>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/repos/bigdatahci2015/forum/issues</div></div></p>
 <p><pre><code>return _.size(data)</code></pre></p>
-<p>There are 22 issues</p>
+<p>There are 25 issues</p>
 <h3 id="what-are-the-titles-of-these-issues">What are the titles of these issues?</h3>
 <p><pre><code>return _.pluck(data, &apos;title&apos;)</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
+ &quot;Week 6 update breaks working ability&quot;,
+ &quot;adding axes to SVG charts&quot;,
+ &quot;Week 6 team homework is released&quot;,
  &quot;serving gitbook&apos;s specific pages&quot;,
  &quot;Tried to push and could not upload birdstrikes.json&quot;,
  &quot;Viz drills are posted&quot;,
@@ -1102,9 +1156,9 @@ you want.</p>
   &quot;has_pages&quot;: false,
   &quot;forks_count&quot;: 4,
   &quot;mirror_url&quot;: null,
-  &quot;open_issues_count&quot;: 22,
+  &quot;open_issues_count&quot;: 25,
   &quot;forks&quot;: 4,
-  &quot;open_issues&quot;: 22,
+  &quot;open_issues&quot;: 25,
   &quot;watcher</pre>
 return _.chain(data)
             .map(function(obj) {
@@ -1120,7 +1174,7 @@ return _.chain(data)
 <h3 id="how-many-public-gists-does-the-user-doubleshow-have">How many public gists does the user <code>doubleshow</code> have?</h3>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/users/doubleshow</div></div></p>
 <p><pre><code>return data[&quot;public_gists&quot;]</code></pre>
-There are 520 gists</p>
+There are 526 gists</p>
 
                     
                     </section>
@@ -1156,6 +1210,10 @@ There are 520 gists</p>
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
