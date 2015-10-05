@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4.1" data-basepath="../.." data-revision="Wed Sep 30 2015 18:00:29 GMT-0600 (MDT)">
+    <div class="book" data-level="1.4.1" data-basepath="../.." data-revision="Sun Oct 04 2015 20:54:21 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -1104,18 +1104,17 @@ you want.</p>
 <h3 id="how-many-issues-have-been-created-to-date-in-our-class-s-forum-repository">How many issues have been created to date in our class&apos;s forum repository?</h3>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/repos/bigdatahci2015/forum/issues</div></div></p>
 <p><pre><code>return _.size(data)</code></pre></p>
-<p>There are 26 issues</p>
+<p>There are 25 issues</p>
 <h3 id="what-are-the-titles-of-these-issues">What are the titles of these issues?</h3>
 <p><pre><code>return _.pluck(data, &apos;title&apos;)</code></pre></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
+ &quot;All of my gitbook work is missing &quot;,
+ &quot;Question about using Mongo DB for the android app project&quot;,
  &quot;Trouble getting mongodb  data&quot;,
- &quot;Week 6 update breaks working ability&quot;,
  &quot;adding axes to SVG charts&quot;,
  &quot;Week 6 team homework is released&quot;,
  &quot;serving gitbook&apos;s specific pages&quot;,
- &quot;Tried to push and could not upload birdstrikes.json&quot;,
  &quot;Viz drills are posted&quot;,
- &quot;Which Airports had the most incidents of aircraft being damaged?&quot;,
  &quot;Questions for the Birdstrike Hackathon&quot;,
  &quot;Corrupt file in .git&quot;,
  &quot;Converting JSON to Tableau ready (on OSX)&quot;,
@@ -1140,7 +1139,7 @@ you want.</p>
 <p>Our class&apos;s Github organization is <a href="https://github.com/bigdatahci2015/" target="_blank">bigdatahci2015</a>.</p>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/orgs/bigdatahci2015/repos</div></div></p>
 <p><pre><code>return _.size(data)</code></pre></p>
-<p>There are 5 repos</p>
+<p>There are 6 repos</p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  {
   &quot;id&quot;: 41092269,
@@ -1223,16 +1222,16 @@ you want.</p>
   &quot;has_pages&quot;: false,
   &quot;forks_count&quot;: 4,
   &quot;mirror_url&quot;: null,
-  &quot;open_issues_count&quot;: 26,
+  &quot;open_issues_count&quot;: 25,
   &quot;forks&quot;: 4,
-  &quot;open_issues&quot;: 26,
+  &quot;open_issues&quot;: 25,
   &quot;watcher</pre>
 return _.chain(data)
             .map(function(obj) {
                 return [obj[&quot;name&quot;], obj[&quot;forks_count&quot;]];
             })
 
-<pre style="font-size:11px;line-height:1;max-height:300px;">5</pre>
+<pre style="font-size:11px;line-height:1;max-height:300px;">6</pre>
 
 <h3 id="how-many-public-repositories-does-the-user-doubleshow-have">How many public repositories does the user <code>doubleshow</code> have?</h3>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/users/doubleshow/repos</div></div>
@@ -1241,7 +1240,7 @@ return _.chain(data)
 <h3 id="how-many-public-gists-does-the-user-doubleshow-have">How many public gists does the user <code>doubleshow</code> have?</h3>
 <p><div class="githubapi">       <div class="message">Data is loaded from https://api.github.com/users/doubleshow</div></div></p>
 <p><pre><code>return data[&quot;public_gists&quot;]</code></pre>
-There are 526 gists</p>
+There are 531 gists</p>
 
                     
                     </section>
